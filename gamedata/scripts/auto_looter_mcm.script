@@ -1,0 +1,161 @@
+disassemble_ammo_options = {
+	all = "all",
+	non_favourite = "non_favourite",
+	none = "none"
+}
+
+disassemble_armor_options = {
+	all = "all",
+	with_usable_parts = "with_usable_parts",
+	none = "none"
+}
+
+disassemble_weapon_options = {
+	all = "all",
+	with_usable_barrel = "with_usable_barrel",
+	none = "none"
+}
+
+strip_weapon_options = {
+	all = "all",
+	usable_parts = "usable_parts",
+	none = "none"
+}
+
+disassemble_misc_items_defaults = {
+	porn = false, -- Russian PLAYBOY
+	porn2 = false, -- Ukrainian MAXIM
+	beadspread = true,
+	synthrope = true,
+	tarpaulin = true,
+	underwear = true,
+	shovel_old = true, -- Metal shovel
+	shovel_mili = true, -- Military field shovel
+	ball_hammer = false,
+	boots = true, -- Leather boots
+	broken_detector = true,
+	cutlery = false,
+	explo_metalcan_powder = true,
+	flashlight_broken = true,
+	gloves = true, -- Leather gloves
+	hand_watch = false,
+	headlamp = true, -- Old headlamp
+	mirror = true, -- Telescopic mirror
+	radio = true, -- Small radio
+	radio2 = true, -- Broken radio
+	walkie = true, -- Walkie talkie
+}
+
+loot_part_options = {
+	all = 'all',
+	usable = 'usable',
+	none = 'none'
+}
+
+-- Default config
+config = {
+	remote_looting_distance = 2.5,
+	looter_key = DIK_keys.DIK_LMENU,
+
+	-- Ammo
+	disassemble_ammo = disassemble_ammo_options.non_favourite,
+	loot_ammo = true,
+	loot_ammo_parts = true,
+	-- Armor
+	disassemble_armor = disassemble_armor_options.with_usable_parts,
+	loot_armor_parts = loot_part_options.usable,
+	-- Weapon
+	disassemble_weapon = disassemble_weapon_options.with_usable_barrel,
+	strip_weapon = strip_weapon_options.usable_parts,
+	strip_attachments = true,
+	loot_weapon_parts = loot_part_options.usable,
+	-- Misc
+	disassemble_misc = disassemble_misc_items_defaults
+}
+
+op = {
+	id = "auto_looter", sh = true, gr = {
+    	{id = "banner", type = "slide", size = {512, 50}, spacing = 20, text="ui_mcm_auto_looter_banner"},
+		{id = "looter_key", type = "key_bind", val = 2, def = config.looter_key},
+        {id = "remote_looting_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_remote_looting_title"},
+		{id = "remote_looting_description", type = "desc", text="ui_mcm_auto_looter_remote_looting_description"},
+        {id = "remote_looting_distance", type = "track", val = 2, min = 0, max = 50, step = 0.5, def = config.remote_looting_distance},
+    	{id = "divider", type = "line"},
+
+		{id = "disassemble_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_disassemble_title"},
+        {id = "disassemble_ammo", type="list", val=0, def=config.disassemble_ammo, content={
+			{disassemble_ammo_options.all, "auto_looter_all_label"},
+			{disassemble_ammo_options.non_favourite, "auto_looter_non_favourite_label"},
+			{disassemble_ammo_options.none, "auto_looter_none_label"},
+		  }
+		},
+		{id = "disassemble_armor", type="list", val=0, def=config.disassemble_armor, content={
+			{disassemble_armor_options.all, "auto_looter_all_label"},
+			{disassemble_armor_options.with_usable_parts, "auto_looter_with_usable_parts_label"},
+			{disassemble_armor_options.none, "auto_looter_none_label"},
+		  }
+		},
+		{id = "disassemble_weapon", type="list", val=0, def=config.disassemble_weapon, content={
+			{disassemble_weapon_options.all, "auto_looter_all_label"},
+			{disassemble_weapon_options.with_usable_barrel, "auto_looter_with_usable_barrel_label"},
+			{disassemble_weapon_options.none, "auto_looter_none_label"},
+		  }
+		},
+		{id = "disassemble_misc_title", type = "desc", text="ui_mcm_auto_looter_disassemble_misc_title"},
+		{id = "disassemble_misc_description", type = "desc", text="ui_mcm_auto_looter_disassemble_misc_description"},
+		unpack((function () 
+			local result = {}
+			for k, v in pairs(disassemble_misc_items_defaults) do
+				table.insert(result, {
+					id = "disassemble_misc_" .. k,
+					text = "st_" .. k,
+					type = "check",
+					val = 1,
+					def = v
+				})
+			end
+			return result
+		end)())
+	}
+}
+
+-- Unpacked table records are overwritten by the thing below if it's defined right after it. Need to insert it later separately. Sheesh...
+local rest = {
+	{id = "divider", type = "line"},
+
+	{id = "strip_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_strip_title"},
+	{id = "strip_attachments", type = "check", val = 1, def = config.strip_attachments},
+	{id = "strip_weapon", type="list", val=0, def=config.strip_weapon, content={
+		{strip_weapon_options.all, "auto_looter_all_label"},
+		{strip_weapon_options.usable_parts, "auto_looter_usable_label"},
+		{strip_weapon_options.none, "auto_looter_none_label"},
+		}
+	},
+	{id = "divider", type = "line"},
+
+	{id = "loot_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_loot_title"},
+	{id = "loot_description", type = "desc", text="ui_mcm_auto_looter_loot_description"},
+	{id = "loot_ammo", type = "check", val = 1, def = config.loot_ammo},
+	{id = "loot_ammo_parts", type = "check", val = 1, def = config.loot_ammo_parts},
+	{id = "loot_armor_parts", type="list", val=0, def=config.loot_armor_parts, content={
+		{loot_part_options.all, "auto_looter_all_label"},
+		{loot_part_options.usable, "auto_looter_usable_label"},
+		{loot_part_options.none, "auto_looter_none_label"},
+		}
+	},
+	{id = "loot_weapon_parts", type="list", val=0, def=config.loot_weapon_parts, content={
+		{loot_part_options.all, "auto_looter_all_label"},
+		{loot_part_options.usable, "auto_looter_usable_label"},
+		{loot_part_options.none, "auto_looter_none_label"},
+		}
+	}
+}
+
+for _, v in pairs(rest) do
+	table.insert(op.gr, v)
+end
+
+
+function on_mcm_load()
+    return op
+end

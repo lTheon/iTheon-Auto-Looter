@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>	
+	<string id="ui_mcm_menu_auto_looter">
+		<text>Auto Looter</text>
+	</string>
+	<string id="ui_mcm_auto_looter_banner">
+		<text>Auto Looter</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_looter_key">
+		<text>Looter key</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_remote_looting_title">
+		<text>Remote looting</text>
+	</string>
+	<string id="ui_mcm_auto_looter_remote_looting_description">
+		<text>Set the max distance at which remote looting should be possible. Setting it to 0 will disable remote looting.</text>
+	</string>
+	<string id="ui_mcm_auto_looter_remote_looting_distance">
+		<text>Max distance</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_disassemble_title">
+		<text>Auto disassembling settings</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_ammo">
+		<text>Disassemble ammo</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_armor">
+		<text>Disassemble outfits and headgears</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_weapon">
+		<text>Disassemble weapons</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_title">
+		<text>Disassemble misc</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_description">
+		<text>Given that some of the misc items' parts are near to worthless and tasks for the whole item might give you some better reward (e. g. porn magazines), you can define below what kind of misc items should and should not be disassembled.</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_strip_title">
+		<text>Auto parts and attachments stripping settings</text>
+	</string>
+	<string id="ui_mcm_auto_looter_strip_attachments">
+		<text>Strip attachments</text>
+	</string>
+	<string id="ui_mcm_auto_looter_strip_weapon">
+		<text>Strip weapon parts</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_loot_title">
+		<text>Auto looting settings</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_description">
+		<text>Define which types of items you want to (conditionally) loot. Armors and weapons will automatically be omitted. The rest of the item types not described below (e. g. upgrade kits, weapon attachments, repair items, not disassembled misc items, etc.) will be automatically looted to not overcomplicate the logic.</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_ammo">
+		<text>Loot ammo</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_ammo_parts">
+		<text>Loot ammo parts</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_armor_parts">
+		<text>Loot armor parts</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_weapon_parts">
+		<text>Loot weapon parts</text>
+	</string>
+
+	<string id="ui_mcm_lst_auto_looter_all_label">
+		<text>All</text>
+	</string>
+	<string id="ui_mcm_lst_auto_looter_none_label">
+		<text>None</text>
+	</string>
+	<string id="ui_mcm_lst_auto_looter_non_favourite_label">
+		<text>Non-favourite only</text>
+	</string>
+	<string id="ui_mcm_lst_auto_looter_with_usable_parts_label">
+		<text>With usable parts</text>
+	</string>
+	<string id="ui_mcm_lst_auto_looter_with_usable_barrel_label">
+		<text>With usable barrel</text>
+	</string>
+	<string id="ui_mcm_lst_auto_looter_usable_label">
+		<text>Usable</text>
+	</string>
+
+
+	<!-- To do: remove this section once RavenAscendant adds the support for "text" prop for more fields -->
+	<!-- There might be an exception required for the powder can - can't see XMLs defined for it -->
+	<string id="ui_mcm_auto_looter_disassemble_misc_porn">
+		<text>Russian PLAYBOY</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_porn2">
+		<text>Ukrainian MAXIM</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_beadspread">
+		<text>Bed spread</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_synthrope">
+		<text>2 synthetic ropes</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_tarpaulin">
+		<text>Camouflaged tarpaulin</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_underwear">
+		<text>Soaked underwear</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_shovel_old">
+		<text>Metal shovel</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_shovel_mili">
+		<text>Military field shovel</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_ball_hammer">
+		<text>Ball-peen hammer</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_boots">
+		<text>Leather boots</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_broken_detector">
+		<text>Broken detector</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_cutlery">
+		<text>Field cutlery</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_explo_metalcan_powder">
+		<text>Powder can</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_flashlight_broken">
+		<text>Broken flashlight</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_gloves">
+		<text>Leather gloves</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_hand_watch">
+		<text>Hand watch</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_headlamp">
+		<text>Old head lamp</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_mirror">
+		<text>Telescopic mirror</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_radio">
+		<text>Small radio</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_radio2">
+		<text>Broken radio</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_walkie">
+		<text>Walkie talkie</text>
+	</string>
+</string_table>
