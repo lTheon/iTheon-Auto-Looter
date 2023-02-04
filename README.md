@@ -5,9 +5,9 @@
 Mod for Stalker Anomaly that adds the fully configurable (MCM config) auto-looting feature. Also allows you for remote looting (without opening a container).
 It has a semi-hard requirement - https://github.com/lTheon/iTheon-Pick-Best-Disassembly-Tool . This mod can be replaced with any other mod that prevents the full depletion of disassembly tools
 
-Tested in both GAMMA and vanilla Anomaly. To get all you can out of it, you'll need two other mods:
-https://github.com/ahuyn/anomaly-wpo
-https://www.moddb.com/mods/stalker-anomaly/addons/crafting-info-in-tooltips
+Tested in both GAMMA and vanilla Anomaly. To get all you can out of it, you'll need two other mods: <br>
+https://github.com/ahuyn/anomaly-wpo <br>
+https://www.moddb.com/mods/stalker-anomaly/addons/crafting-info-in-tooltips <br>
 Or simply play GAMMA :)
 
 Things you can configure - disassembling items (different options per item type), stripping weapon parts and attachments, looting stuff, remote looting range.
@@ -16,8 +16,7 @@ Given a large amount of possible combinations, I'm pretty sure it's almost impos
 
 Contributors: 
 
-Russian translation: https://github.com/IIJTypmaH
-
+Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above: Blackgrowl
 
 Changelog:
