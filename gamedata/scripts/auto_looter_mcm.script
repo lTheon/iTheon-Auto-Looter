@@ -74,10 +74,7 @@ config = {
 	strip_attachments = true,
 	loot_weapon_parts = loot_part_options.usable,
 	-- Misc
-	disassemble_misc = disassemble_misc_items_defaults,
-
-	-------------- Misc options (not misc items)
-	no_valid_tool_messaging = true
+	disassemble_misc = disassemble_misc_items_defaults
 }
 
 op = {
@@ -158,11 +155,7 @@ local rest = {
 		{loot_part_options.usable, "auto_looter_usable_label"},
 		{loot_part_options.none, "auto_looter_none_label"},
 		}
-	},
-	{id = "divider", type = "line"},
-
-	{id = "misc_options_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_misc_options_title"},
-	{id = "no_valid_tool_messaging", type = "check", val = 1, def = config.no_valid_tool_messaging},
+	}
 }
 
 for _, v in pairs(rest) do

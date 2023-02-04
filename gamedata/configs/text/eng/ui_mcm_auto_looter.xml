@@ -85,14 +85,6 @@
 		<text>Loot weapon parts</text>
 	</string>
 
-	<string id="ui_mcm_auto_looter_misc_options_title">
-		<text>Miscellaneous settings</text>
-	</string>
-	<string id="ui_mcm_auto_looter_no_valid_tool_messaging">
-		<text>Show message when no valid disassembly tool is available</text>
-	</string>
-
-	<!-- Dropdown options -->
 	<string id="ui_mcm_lst_auto_looter_all_label">
 		<text>All</text>
 	</string>
