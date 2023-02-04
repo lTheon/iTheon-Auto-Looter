@@ -13,6 +13,8 @@
 	<string id="st_auto_looter_remote_looting_too_far">
 		<text>The target is too far to loot</text>
 	</string>
+
+	<!-- Context menu on items -->
 	<string id="st_auto_looter_enable_auto_disassemble">
 		<text>Enable auto-disassemble</text>
 	</string>
