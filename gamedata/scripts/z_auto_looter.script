@@ -362,7 +362,45 @@ local function load_state(mdata)
     favorite_itms = mdata.rax_favorite_itms or favorite_itms
 end
 
+function is_misc_item_defined_in_config(obj)
+	for k, _ in pairs(config) do
+		if k == "disassemble_misc_" .. obj:section() then
+			return true
+		end
+	end
+	return false
+end
+
+function context_menu_string(obj) 
+	if config["disassemble_misc_" .. obj:section()] then
+		return game.translate_string("st_auto_looter_disable_auto_disassemble")
+	else
+		return game.translate_string("st_auto_looter_enable_auto_disassemble")
+	end
+end
+
+function change_config(obj)
+	local config_key = "disassemble_misc_" .. obj:section()
+	local new_value = not config[config_key]
+	ui_mcm.set("auto_looter/" .. config_key, new_value)
+	config[config_key] = new_value
+end
+
+
 function on_game_start()
+	if custom_functor_autoinject then 
+		custom_functor_autoinject.add_functor("auto_looter_config", is_misc_item_defined_in_config, context_menu_string, nil, change_config, {
+			actor_equ = true,
+			actor_belt = true,
+			actor_bag = true,
+			actor_trade_bag = true,
+			actor_trade = true,
+			npc_bag = true,
+			npc_trade = true,
+			npc_trade_bag = true
+		}) 
+	end
+
 	RegisterScriptCallback("on_key_press", auto_looter)
 	RegisterScriptCallback("load_state", load_state)
 	RegisterScriptCallback("on_game_load", load_settings)
