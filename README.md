@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.4
+# iTheon-Auto-Looter - v0.1.5
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -17,9 +17,12 @@ Given a large amount of possible combinations, I'm pretty sure it's almost impos
 Contributors: 
 
 Russian translation: https://github.com/IIJTypmaH <br>
-Cool image you can see above: Blackgrowl
+Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
+
+v0.1.5
+- Added a cool MCM banner by Blackgrowl
 
 v0.1.4
 - Removed some of hard dependencies
