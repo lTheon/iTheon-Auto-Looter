@@ -4,9 +4,6 @@
 	<string id="ui_mcm_menu_auto_looter">
 		<text>Auto Looter</text>
 	</string>
-	<string id="ui_mcm_auto_looter_banner">
-		<text>Auto Looter</text>
-	</string>
 	<string id="ui_mcm_auto_looter_base_description">
 		<text>Автолутер выполняет действия в определенном порядке: Разборка -> Снятие компонентов/нав.оборудования -> Лут. т. е. если вы включите разборку брони, то компоненты, полученные из нее, в дальнейшем будут подвергаться дополнительной проверке состояния перед лутом, если она тоже включена.</text>
 	</string>
