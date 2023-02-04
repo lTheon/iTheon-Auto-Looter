@@ -1,4 +1,7 @@
 # iTheon-Auto-Looter - v0.1.4
+
+![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
+
 Mod for Stalker Anomaly that adds the fully configurable (MCM config) auto-looting feature. Also allows you for remote looting (without opening a container).
 It has a semi-hard requirement - https://github.com/lTheon/iTheon-Pick-Best-Disassembly-Tool . This mod can be replaced with any other mod that prevents the full depletion of disassembly tools
 
@@ -14,6 +17,7 @@ Given a large amount of possible combinations, I'm pretty sure it's almost impos
 Contributors: 
 
 Russian translation: https://github.com/IIJTypmaH
+Cool image you can see above: Blackgrowl
 
 Changelog:
 
