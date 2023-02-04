@@ -10,6 +10,9 @@ Things you can configure - disassembling items (different options per item type)
 
 Given a large amount of possible combinations, I'm pretty sure it's almost impossible for me to test everything myself, though a big chunk of time was spent on that anyway. That's why the initial version is set to **v0.1**, as there might be some minor bugs to fix that I did not catch.
 
+Contributors: 
+Russian translation: https://github.com/IIJTypmaH
+
 Changelog:
 v0.1.1
 - Changed defaults - disassembling is now turned off by default for weapons, armors and ammo; remote looting disabled by default.
