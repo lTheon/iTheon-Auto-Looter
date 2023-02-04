@@ -17,6 +17,7 @@ Given a large amount of possible combinations, I'm pretty sure it's almost impos
 Contributors: 
 
 Russian translation: https://github.com/IIJTypmaH
+
 Cool image you can see above: Blackgrowl
 
 Changelog:
