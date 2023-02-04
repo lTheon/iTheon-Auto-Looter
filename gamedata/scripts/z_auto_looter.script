@@ -30,7 +30,6 @@ local function load_settings()
 end
 
 local valid_modes = {
-	[1] = true,
 	[4] = true
 }
 
@@ -69,7 +68,6 @@ function get_actor()
 
 	local target = level.get_target_obj()
 	if target and (IsStalker(target) and not target:alive() or IsInvbox(target)) then
-		printf(target:position():distance_to(db.actor:position()))
 		if config.remote_looting_distance == 0 then
 			news_manager.send_tip(db.actor, game.translate_string("st_auto_looter_remote_looting_disabled"))
 		elseif target:position():distance_to(db.actor:position()) > config.remote_looting_distance then
@@ -126,7 +124,7 @@ function collect_items(actor)
 	end
 
 	if IsStalker(actor) then
-		actor:iterate_ruck(iterate, actor)
+		actor:iterate_inventory(iterate, actor)
 	elseif IsInvbox(actor) then
 		actor:iterate_inventory_box(iterate, actor)
 	end
@@ -242,7 +240,6 @@ local queued_weapons = {}
 function handle_strip(actor)
 	local collected_items = collect_items(actor)
 	local iteration = 0
-
 	for idx, wpn in pairs(collected_items) do
 		iteration = iteration + 1
 		if IsWeapon(wpn) then
@@ -252,7 +249,7 @@ function handle_strip(actor)
 			elseif config.strip_weapon == strip_weapon_options.all then
 				zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
 			elseif config.strip_weapon == strip_weapon_options.usable_parts then
-				local parts = item_parts.get_parts_con(wpn, nil, true)
+				local parts = item_parts.get_parts_con(wpn, nil, true) or {} -- failsafe
 				for part_section, part_con in pairs(parts) do
 					if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
 						zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
