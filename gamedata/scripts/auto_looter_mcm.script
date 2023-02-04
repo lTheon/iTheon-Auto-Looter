@@ -79,7 +79,7 @@ config = {
 
 op = {
 	id = "auto_looter", sh = true, gr = {
-    	{id = "banner", type = "slide", size = {512, 50}, spacing = 20, text="ui_mcm_auto_looter_banner"},
+    	{id = "banner", type = "slide", size = {512, 50}, link="AL_Banner_Blackgrowl.dds", spacing = 20},
 		{id = "base_description", type = "desc", text="ui_mcm_auto_looter_base_description"},
 		{id = "looter_key_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_looter_key_title"},
 		{id = "looter_key_description", type = "desc", text="ui_mcm_auto_looter_looter_key_description"},
