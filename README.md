@@ -1,10 +1,11 @@
-# iTheon-Auto-Looter - v0.1.3
+# iTheon-Auto-Looter - v0.1.4
 Mod for Stalker Anomaly that adds the fully configurable (MCM config) auto-looting feature. Also allows you for remote looting (without opening a container).
-For now it has two hard requirements:
-1. https://github.com/lTheon/iTheon-Pick-Best-Disassembly-Tool
-2. https://www.moddb.com/mods/stalker-anomaly/addons/weapon-parts-overhaul
+It has a semi-hard requirement - https://github.com/lTheon/iTheon-Pick-Best-Disassembly-Tool . This mod can be replaced with any other mod that prevents the full depletion of disassembly tools
 
-It was tested only in Stalker GAMMA environment, so I don't give you any guarantee that it will work in vanilla Anomaly
+Tested in both GAMMA and vanilla Anomaly. To get all you can out of it, you'll need two other mods:
+https://github.com/ahuyn/anomaly-wpo
+https://www.moddb.com/mods/stalker-anomaly/addons/crafting-info-in-tooltips
+Or simply play GAMMA :)
 
 Things you can configure - disassembling items (different options per item type), stripping weapon parts and attachments, looting stuff, remote looting range.
 
@@ -15,6 +16,9 @@ Contributors:
 Russian translation: https://github.com/IIJTypmaH
 
 Changelog:
+
+v0.1.3
+- Removed some of hard dependencies
 
 v0.1.3
 - Add context menu option for disabling/enabling auto-disassembling for misc items
