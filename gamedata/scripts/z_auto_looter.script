@@ -206,8 +206,8 @@ function cond_armor_disassemble(obj)
 	if config.disassemble_armor == disassemble_armor_options.with_usable_parts then
 		local parts = item_parts.get_parts_con(obj, nil, true)
 		for k, v in pairs(parts) do
-			local is_recipe_material = is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
-			if is_recipe_material or (v >= 50 and zzzz_arti_jamming_repairs.is_part(k)) then
+			local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
+			if is_recipe_material or (v >= 50 and IsItem("part", k)) then
 				return true
 			end
 		end
@@ -217,7 +217,7 @@ end
 
 function cond_weapon_disassemble(obj)
 	-- Gauss CTD fix
-	if not zzzz_arti_jamming_repairs.has_parts(obj) then return false end
+	if not has_parts(obj) then return false end
 
 	if config.disassemble_weapon == disassemble_weapon_options.all then
 		return true
@@ -243,16 +243,18 @@ function handle_strip(actor)
 	for idx, wpn in pairs(collected_items) do
 		iteration = iteration + 1
 		if IsWeapon(wpn) then
-			-- Gauss CTD fix
-			if not zzzz_arti_jamming_repairs.has_parts(wpn) then
+			if zzzz_arti_jamming_repairs then
+				-- Gauss CTD fix
+				if not has_parts(wpn) then
 
-			elseif config.strip_weapon == strip_weapon_options.all then
-				zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
-			elseif config.strip_weapon == strip_weapon_options.usable_parts then
-				local parts = item_parts.get_parts_con(wpn, nil, true) or {} -- failsafe
-				for part_section, part_con in pairs(parts) do
-					if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
-						zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
+				elseif config.strip_weapon == strip_weapon_options.all then
+					zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
+				elseif config.strip_weapon == strip_weapon_options.usable_parts then
+					local parts = item_parts.get_parts_con(wpn, nil, true) or {} -- failsafe
+					for part_section, part_con in pairs(parts) do
+						if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
+							zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
+						end
 					end
 				end
 			end
@@ -405,6 +407,16 @@ function on_game_start()
 	RegisterScriptCallback("load_state", load_state)
 	RegisterScriptCallback("on_game_load", load_settings)
 	RegisterScriptCallback("on_option_change", load_settings)
+end
+
+function has_parts(wpn)
+	if wpn and IsWeapon(wpn) and (not IsMelee(wpn)) then
+		local sec = ini_sys:r_string_ex(wpn:section(),"parent_section") or wpn:section()
+		local parts = itms_manager.ini_parts:r_string_ex("con_parts_list", sec)
+		return parts ~= nil
+	else 
+		return false
+	end
 end
 
 function has_value(tab, val)
