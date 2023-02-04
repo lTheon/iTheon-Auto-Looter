@@ -2,7 +2,7 @@
 
 <string_table>	
 	<string id="st_auto_looter_no_valid_tool">
-		<text>You have no valid disassembly tool for this item or the tool is nearly broken. Auto-disassembling won't run</text>
+		<text>You have no valid disassembly tool for this item or the tool is nearly broken. Auto-disassembling won't run.</text>
 	</string>
 	<string id="st_auto_looter_still_running">
 		<text>Auto looter is still running for this object</text>

@@ -44,6 +44,10 @@ disassemble_misc_items_defaults = {
 	radio = true, -- Small radio
 	radio2 = true, -- Broken radio
 	walkie = true, -- Walkie talkie
+
+	guitar_a = true,
+	compression_bag = true,
+	itm_sleepbag = false
 }
 
 loot_part_options = {
@@ -54,18 +58,18 @@ loot_part_options = {
 
 -- Default config
 config = {
-	remote_looting_distance = 2.5,
+	remote_looting_distance = 0,
 	looter_key = DIK_keys.DIK_LMENU,
 
 	-- Ammo
-	disassemble_ammo = disassemble_ammo_options.non_favourite,
+	disassemble_ammo = disassemble_ammo_options.none,
 	loot_ammo = true,
 	loot_ammo_parts = true,
 	-- Armor
-	disassemble_armor = disassemble_armor_options.with_usable_parts,
+	disassemble_armor = disassemble_armor_options.none,
 	loot_armor_parts = loot_part_options.usable,
 	-- Weapon
-	disassemble_weapon = disassemble_weapon_options.with_usable_barrel,
+	disassemble_weapon = disassemble_weapon_options.none,
 	strip_weapon = strip_weapon_options.usable_parts,
 	strip_attachments = true,
 	loot_weapon_parts = loot_part_options.usable,
@@ -76,6 +80,9 @@ config = {
 op = {
 	id = "auto_looter", sh = true, gr = {
     	{id = "banner", type = "slide", size = {512, 50}, spacing = 20, text="ui_mcm_auto_looter_banner"},
+		{id = "base_description", type = "desc", text="ui_mcm_auto_looter_base_description"},
+		{id = "looter_key_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_looter_key_title"},
+		{id = "looter_key_description", type = "desc", text="ui_mcm_auto_looter_looter_key_description"},
 		{id = "looter_key", type = "key_bind", val = 2, def = config.looter_key},
         {id = "remote_looting_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_remote_looting_title"},
 		{id = "remote_looting_description", type = "desc", text="ui_mcm_auto_looter_remote_looting_description"},

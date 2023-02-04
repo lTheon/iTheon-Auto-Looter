@@ -7,7 +7,16 @@
 	<string id="ui_mcm_auto_looter_banner">
 		<text>Auto Looter</text>
 	</string>
+	<string id="ui_mcm_auto_looter_base_description">
+		<text>Auto looter performs actions in a specific order: Disassembling -> Part/Attachment stripping -> Looting. I. e. if you turn on the disassembling for armors, the parts received out of it will later be subjected to additional condition check before looting if it's also enabled.</text>
+	</string>
 
+	<string id="ui_mcm_auto_looter_looter_key_title">
+		<text>Key binding</text>
+	</string>
+	<string id="ui_mcm_auto_looter_looter_key_description">
+		<text>Some mods are blocking certain key events on inventory UI. It is advised to not change the binding below, as Left Alt should never be blocked.</text>
+	</string>
 	<string id="ui_mcm_auto_looter_looter_key">
 		<text>Looter key</text>
 	</string>
@@ -16,7 +25,7 @@
 		<text>Remote looting</text>
 	</string>
 	<string id="ui_mcm_auto_looter_remote_looting_description">
-		<text>Set the max distance at which remote looting should be possible. Setting it to 0 will disable remote looting.</text>
+		<text>Set the max distance at which remote looting should be possible. Setting it to 0 will disable remote looting. WARNING: Auto-looting should not be enabled if you're using mods that fire additional scripts on opening dead stalker/box inventories. Gamma players should always have it turned off</text>
 	</string>
 	<string id="ui_mcm_auto_looter_remote_looting_distance">
 		<text>Max distance</text>
@@ -30,6 +39,9 @@
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_armor">
 		<text>Disassemble outfits and headgears</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_armor_desc">
+		<text>Usable armor parts are those with condition higher than 50% or those which can be used in crafting recipes</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_weapon">
 		<text>Disassemble weapons</text>
@@ -66,6 +78,9 @@
 	<string id="ui_mcm_auto_looter_loot_armor_parts">
 		<text>Loot armor parts</text>
 	</string>
+	<string id="ui_mcm_auto_looter_loot_armor_parts_desc">
+		<text>Usable armor parts are those with condition higher than 50% or those which can be used in crafting recipes</text>
+	</string>
 	<string id="ui_mcm_auto_looter_loot_weapon_parts">
 		<text>Loot weapon parts</text>
 	</string>
@@ -92,6 +107,7 @@
 
 	<!-- To do: remove this section once RavenAscendant adds the support for "text" prop for more fields -->
 	<!-- There might be an exception required for the powder can - can't see XMLs defined for it -->
+	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name) -->
 	<string id="ui_mcm_auto_looter_disassemble_misc_porn">
 		<text>Russian PLAYBOY</text>
 	</string>
@@ -154,5 +170,14 @@
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_walkie">
 		<text>Walkie talkie</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_guitar_a">
+		<text>Guitar</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_compression_bag">
+		<text>Compression bag</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_sleepbag">
+		<text>Sleeping bag</text>
 	</string>
 </string_table>
