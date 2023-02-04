@@ -1,11 +1,6 @@
 -- Auto Looter
 -- Author: iTheon
 -- License: MIT
-
-act_fieldstrip = zzzz_arti_jamming_repairs and zzzz_arti_jamming_repairs.act_fieldstrip
-has_parts = zzzz_arti_jamming_repairs and zzzz_arti_jamming_repairs.has_parts
-is_part = zzzz_arti_jamming_repairs and zzzz_arti_jamming_repairs.is_part
-
 local disassemble_ammo_options = auto_looter_mcm.disassemble_ammo_options
 local disassemble_armor_options = auto_looter_mcm.disassemble_armor_options
 local disassemble_weapon_options = auto_looter_mcm.disassemble_weapon_options
@@ -214,7 +209,7 @@ function cond_armor_disassemble(obj)
 		local parts = item_parts.get_parts_con(obj, nil, true)
 		for k, v in pairs(parts) do
 			local is_recipe_material = is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
-			if is_recipe_material or (v >= 50 and is_part(k)) then
+			if is_recipe_material or (v >= 50 and zzzz_arti_jamming_repairs.is_part(k)) then
 				return true
 			end
 		end
@@ -224,7 +219,7 @@ end
 
 function cond_weapon_disassemble(obj)
 	-- Gauss CTD fix
-	if not has_parts(obj) then return false end
+	if not zzzz_arti_jamming_repairs.has_parts(obj) then return false end
 
 	if config.disassemble_weapon == disassemble_weapon_options.all then
 		return true
@@ -252,15 +247,15 @@ function handle_strip(actor)
 		iteration = iteration + 1
 		if IsWeapon(wpn) then
 			-- Gauss CTD fix
-			if not has_parts(wpn) then
+			if not zzzz_arti_jamming_repairs.has_parts(wpn) then
 
 			elseif config.strip_weapon == strip_weapon_options.all then
-				act_fieldstrip(wpn:id())
+				zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
 			elseif config.strip_weapon == strip_weapon_options.usable_parts then
 				local parts = item_parts.get_parts_con(wpn, nil, true)
 				for part_section, part_con in pairs(parts) do
-					if not string.find(part_section, "barrel") and part_con >= 60 and is_part(part_section) then
-						act_fieldstrip(wpn:id(), part_section)
+					if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
+						zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
 					end
 				end
 			end
