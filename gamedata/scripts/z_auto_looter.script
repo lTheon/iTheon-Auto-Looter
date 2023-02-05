@@ -252,6 +252,7 @@ function handle_strip(actor)
 				if not has_parts(wpn) then
 
 				elseif config.strip_weapon == strip_weapon_options.all then
+					item_parts.get_parts_con(wpn, nil, true) -- required to force generating parts in new bodies - CTD failsafe
 					zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
 				elseif config.strip_weapon == strip_weapon_options.usable_parts then
 					local parts = item_parts.get_parts_con(wpn, nil, true) or {} -- failsafe
