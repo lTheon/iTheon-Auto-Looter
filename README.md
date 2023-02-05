@@ -3,7 +3,7 @@
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
 Mod for Stalker Anomaly that adds the fully configurable (MCM config) auto-looting feature. Also allows you for remote looting (without opening a container).
-It has a semi-hard requirement - https://github.com/lTheon/iTheon-Pick-Best-Disassembly-Tool . This mod can be replaced with any other mod that prevents the full depletion of disassembly tools
+It has a semi-hard requirement - https://github.com/lTheon/iTheon-Pick-Best-Disassembly-Tool . Technicaly you can play without this dependency, but you might experience some CTDs on disassembling large amount of items at once (just XRay stuff). This mod can be replaced with any other mod that prevents the full depletion of disassembly tools
 
 Tested in both GAMMA and vanilla Anomaly. To get all you can out of it, you'll need two other mods: <br>
 https://github.com/ahuyn/anomaly-wpo <br>
@@ -22,7 +22,7 @@ Cool image you can see above and the MCM banner: Blackgrowl
 Changelog:
 
 v0.1.9
-- Fix looter stutters/infinite loop on dead bodies
+- Fix looter stutters/infinite loop on empty dead bodies
 
 v0.1.8
 - Added stalker-dropped PDAs to disassembling config list - defaults set to false
