@@ -161,11 +161,13 @@ function handle_disassemble(actor)
 		if should_disassemble then
 			local obj_d = get_disassembly_tool(v)
 			if not obj_d then 
-				-- Delay required for the message to appear after the actual disassembling of other stuff and not before
-				CreateTimeEvent("auto_looter_no_suitable_tool", "auto_looter_no_suitable_tool_" .. v:id(), 0, function () 
-					news_manager.send_tip(db.actor, game.translate_string("st_auto_looter_no_valid_tool"), nil, "swiss_knife", 6000)
-					return true
-				end)
+				if config.no_valid_tool_messaging then
+					-- Delay required for the message to appear after the actual disassembling of other stuff and not before
+					CreateTimeEvent("auto_looter_no_suitable_tool", "auto_looter_no_suitable_tool_" .. v:id(), 0, function () 
+						news_manager.send_tip(db.actor, game.translate_string("st_auto_looter_no_valid_tool"), nil, "swiss_knife", 6000)
+						return true
+					end)
+				end
 			else
 				item_parts.func_disassembly(v, obj_d)
 			end
@@ -358,6 +360,10 @@ function cond_loot_weapon_part(obj)
 		return con >= 0.6
 	end
 	return false
+end
+
+function handle_delete(actor)
+
 end
 
 local function load_state(mdata)
