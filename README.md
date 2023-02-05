@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.6
+# iTheon-Auto-Looter - v0.1.7
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -20,6 +20,9 @@ Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
+
+v0.1.7
+- Add failsafe for stripping all parts.
 
 v0.1.6
 - Experimental: Add proximity looting
