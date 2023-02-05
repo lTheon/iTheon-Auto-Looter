@@ -29,16 +29,16 @@
 	</string>
 
 	<string id="ui_mcm_auto_looter_proximity_looting_title">
-		<text>EXPERIMENTAL: Proximity looting</text>
+		<text>ЭКСПЕРИМЕНТАЛЬНО: Лутинг на расстоянии</text>
 	</string>
 	<string id="ui_mcm_auto_looter_proximity_looting_description">
-		<text>Proximity looting works in a similar manner to the remote looting, but the difference is that it refires automatically with configurable invervals and iterates over all lootable bodies (inventory boxes excluded to not loot your own stashes) in a given range. Setting range to 0 will disable proximity looting. WARNING: Proximity-looting should not be enabled if you're using mods that fire additional scripts on opening dead stalker inventories. Gamma players should always have it turned off.</text>
+		<text>Лутинг на расстоянии работает так же, как дистанционный лутинг, но разница в том, что она перезапускается автоматически с настраиваемыми инвервалами и перебирает все тела, которые можно пролутать (исключая контейнеры, чтобы не брать предметы из ваших собственных тайников) в заданном диапазоне. Установка диапазона на 0 отключит лутинг на расстоянии. ПРЕДУПРЕЖДЕНИЕ: не следует включать, если вы используете моды, запускающие дополнительные скрипты при открытии инвентаря мертвых сталкеров. ДЛЯ ИГРОКОВ "GAMMA" ДАННЫЙ ПАРАМЕТР ДОЛЖЕН БЫТЬ ВЫКЛЮЧЕН.</text>
 	</string>
 	<string id="ui_mcm_auto_looter_proximity_looting_distance">
-		<text>Proximity looting range</text>
+		<text>Расстояние</text>
 	</string>
 	<string id="ui_mcm_auto_looter_proximity_looting_refire_time">
-		<text>Proximity looting interval</text>
+		<text>Интервал</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_disassemble_title">
@@ -96,10 +96,10 @@
 	</string>
 
 	<string id="ui_mcm_auto_looter_misc_options_title">
-		<text>Miscellaneous settings</text>
+		<text>Другие настройки</text>
 	</string>
 	<string id="ui_mcm_auto_looter_no_valid_tool_messaging">
-		<text>Show message when no valid disassembly tool is available</text>
+		<text>Показывать сообщение, когда нет подходящего инструмента для разборки</text>
 	</string>
 
 	<!-- Dropdown options -->
