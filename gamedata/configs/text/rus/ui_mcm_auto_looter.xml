@@ -5,27 +5,27 @@
 		<text>Auto Looter</text>
 	</string>
 	<string id="ui_mcm_auto_looter_base_description">
-		<text>Автолутер выполняет действия в определенном порядке: Разборка -> Снятие компонентов/нав.оборудования -> Лут. т. е. если вы включите разборку брони, то компоненты, полученные из нее, в дальнейшем будут подвергаться дополнительной проверке состояния перед лутом, если она тоже включена.</text>
+		<text>Auto looter performs actions in a specific order: Disassembling -> Part/Attachment stripping -> Looting. I. e. if you turn on the disassembling for armors, the parts received out of it will later be subjected to additional condition check before looting if it's also enabled.</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_looter_key_title">
-		<text>Клавиша активации</text>
+		<text>Key binding</text>
 	</string>
 	<string id="ui_mcm_auto_looter_looter_key_description">
-		<text>Некоторые моды блокируют определенные ключевые события в пользовательском интерфейсе инвентаря. Рекомендуется не менять приведенную ниже привязку, так как левый Alt НИКОГДА не должен блокироваться.</text>
+		<text>Some mods are blocking certain key events on inventory UI. It is advised to not change the binding below, as Left Alt should never be blocked.</text>
 	</string>
 	<string id="ui_mcm_auto_looter_looter_key">
-		<text>Клавиша активации</text>
+		<text>Looter key</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_remote_looting_title">
-		<text>Дистанционный лутинг</text>
+		<text>Remote looting</text>
 	</string>
 	<string id="ui_mcm_auto_looter_remote_looting_description">
-		<text>Установите максимальное расстояние, на котором возможен дистанционный лутинг. Установка значения на "0" отключит дистанционный лутинг.</text>
+		<text>Set the max distance at which remote looting should be possible. Setting it to 0 will disable remote looting. WARNING: Remote-looting should not be enabled if you're using mods that fire additional scripts on opening dead stalker/box inventories. Gamma players should always have it turned off.</text>
 	</string>
 	<string id="ui_mcm_auto_looter_remote_looting_distance">
-		<text>Максимальная дистанция</text>
+		<text>Max distance</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_proximity_looting_title">
@@ -42,57 +42,57 @@
 	</string>
 
 	<string id="ui_mcm_auto_looter_disassemble_title">
-		<text>Настройки авторазборки</text>
+		<text>Auto disassembling settings</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_ammo">
-		<text>Разбор патронов</text>
+		<text>Disassemble ammo</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_armor">
-		<text>Разбор костюмов и шлемов</text>
+		<text>Disassemble outfits and headgears</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_armor_desc">
-		<text>Используемые компоненты брони — компоненты, состояние которых выше 50%, или те, которые можно использовать в рецептах.</text>
+		<text>Usable armor parts are those with condition higher than 50% or those which can be used in crafting recipes</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_weapon">
-		<text>Разбор оружия</text>
+		<text>Disassemble weapons</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_title">
-		<text>Разбор хлама</text>
+		<text>Disassemble misc</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_description">
-		<text>Учитывая, что некоторые компоненты хлама почти бесполезны, а задания на поиск целого предмета могут дать вам более высокую награду (например, порножурналы), вы можете определить ниже, какие виды хлама следует и не следует разбирать.</text>
+		<text>Given that some of the misc items' parts are near to worthless and tasks for the whole item might give you some better reward (e. g. porn magazines), you can define below what kind of misc items should and should not be disassembled.</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_strip_title">
-		<text>Настройки снятия навесного оборудования и компонентов оружия</text>
+		<text>Auto parts and attachments stripping settings</text>
 	</string>
 	<string id="ui_mcm_auto_looter_strip_attachments">
-		<text>Снимать навесное оборудование</text>
+		<text>Strip attachments</text>
 	</string>
 	<string id="ui_mcm_auto_looter_strip_weapon">
-		<text>Извлекать компоненты оружия</text>
+		<text>Strip weapon parts</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_loot_title">
-		<text>Настройки автолутера</text>
+		<text>Auto looting settings</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_description">
-		<text>Определите, какие типы предметов вы хотите автоматически брать. Броня и оружие будут автоматически исключены. Остальные типы предметов, НЕ описанные ниже (например, наборы улучшений, навесное оборудование для оружия, предметы для ремонта, неразобранные предметы и т.д.), будут автоматически взяты.</text>
+		<text>Define which types of items you want to (conditionally) loot. Armors and weapons will automatically be omitted. The rest of the item types not described below (e. g. upgrade kits, weapon attachments, repair items, not disassembled misc items, etc.) will be automatically looted to not overcomplicate the logic.</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_ammo">
-		<text>Брать патроны</text>
+		<text>Loot ammo</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_ammo_parts">
-		<text>Брать компоненты патронов</text>
+		<text>Loot ammo parts</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_armor_parts">
-		<text>Брать компоненты брони</text>
+		<text>Loot armor parts</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_armor_parts_desc">
-		<text>Используемые компоненты брони — компоненты, состояние которых выше 50%, или те, которые можно использовать в рецептах.</text>
-	</string>  
+		<text>Usable armor parts are those with condition higher than 50% or those which can be used in crafting recipes</text>
+	</string>
 	<string id="ui_mcm_auto_looter_loot_weapon_parts">
-		<text>Брать компоненты оружия</text>
+		<text>Loot weapon parts</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_misc_options_title">
@@ -104,98 +104,98 @@
 
 	<!-- Dropdown options -->
 	<string id="ui_mcm_lst_auto_looter_all_label">
-		<text>Все</text>
+		<text>All</text>
 	</string>
 	<string id="ui_mcm_lst_auto_looter_none_label">
-		<text>Нет</text>
+		<text>None</text>
 	</string>
 	<string id="ui_mcm_lst_auto_looter_non_favourite_label">
-		<text>Не избранное</text>
+		<text>Non-favourite only</text>
 	</string>
 	<string id="ui_mcm_lst_auto_looter_with_usable_parts_label">
-		<text>С пригодными для использования компонентами</text>
+		<text>With usable parts</text>
 	</string>
 	<string id="ui_mcm_lst_auto_looter_with_usable_barrel_label">
-		<text>С пригодным для использования стволом</text>
+		<text>With usable barrel</text>
 	</string>
 	<string id="ui_mcm_lst_auto_looter_usable_label">
-		<text>Пригодные</text>
+		<text>Usable</text>
 	</string>
 
 
 	<!-- To do: remove this section once RavenAscendant adds the support for "text" prop for more fields -->
 	<!-- There might be an exception required for the powder can - can't see XMLs defined for it -->
-	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name) -->																																						
+	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name) -->
 	<string id="ui_mcm_auto_looter_disassemble_misc_porn">
-		<text>Журнал «Русский PLAYBOY»</text>
+		<text>Russian PLAYBOY</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_porn2">
-		<text>Украинский журнал «MAXIM»</text>
+		<text>Ukrainian MAXIM</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_beadspread">
-		<text>Покрывало</text>
+		<text>Bed spread</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_synthrope">
-		<text>Два синтетических каната</text>
+		<text>2 synthetic ropes</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_tarpaulin">
-		<text>Камуфляжный брезент</text>
+		<text>Camouflaged tarpaulin</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_underwear">
-		<text>Нижнее бельё</text>
+		<text>Soaked underwear</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_shovel_old">
-		<text>Металлическая лопата</text>
+		<text>Metal shovel</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_shovel_mili">
-		<text>Сапёрная лопатка</text>
+		<text>Military field shovel</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_ball_hammer">
-		<text>Шариковый молоток</text>
+		<text>Ball-peen hammer</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_boots">
-		<text>Кожаные ботинки</text>
+		<text>Leather boots</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_broken_detector">
-		<text>Сломанный детектор</text>
+		<text>Broken detector</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_cutlery">
-		<text>Полевые столовые приборы</text>
+		<text>Field cutlery</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_explo_metalcan_powder">
-		<text>Баллончик с порошком</text>
+		<text>Powder can</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_flashlight_broken">
-		<text>Разбитый фонарь</text>
+		<text>Broken flashlight</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_gloves">
-		<text>Кожаные перчатки</text>
+		<text>Leather gloves</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_hand_watch">
-		<text>Наручные часы</text>
+		<text>Hand watch</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_headlamp">
-		<text>Старая лампа фонарика</text>
+		<text>Old head lamp</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_mirror">
-		<text>Телескопическое зеркало</text>
+		<text>Telescopic mirror</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_radio">
-		<text>Сломанное радио</text>
+		<text>Small radio</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_radio2">
-		<text>Переносное радио</text>
+		<text>Broken radio</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_walkie">
-		<text>Рация «Walkie»</text>				  
+		<text>Walkie talkie</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_guitar_a">
-		<text>Гитара</text>
+		<text>Guitar</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_compression_bag">
-		<text>Компрессионный мешок</text>
+		<text>Compression bag</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_sleepbag">
-		<text>Спальный мешок</text>
+		<text>Sleeping bag</text>
 	</string>
 </string_table>
