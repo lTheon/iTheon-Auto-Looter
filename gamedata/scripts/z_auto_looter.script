@@ -243,9 +243,7 @@ end
 local queued_weapons = {}
 function handle_strip(actor)
 	local collected_items = collect_items(actor)
-	local iteration = 0
 	for idx, wpn in pairs(collected_items) do
-		iteration = iteration + 1
 		if IsWeapon(wpn) then
 			if zzzz_arti_jamming_repairs then
 				-- Gauss CTD fix
@@ -280,14 +278,11 @@ function handle_strip(actor)
 				end
 			end
 		end
-
-		if iteration == table_length(collected_items) then
-			if is_not_empty(queued_weapons) then
-				handle_queue(actor)
-			else
-				continue_looter(actor)
-			end
-		end
+	end
+	if is_not_empty(queued_weapons) then
+		handle_queue(actor)
+	else
+		continue_looter(actor)
 	end
 end
 
