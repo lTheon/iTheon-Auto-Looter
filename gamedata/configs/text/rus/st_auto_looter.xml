@@ -2,16 +2,16 @@
 
 <string_table>	
 	<string id="st_auto_looter_no_valid_tool">
-		<text>You have no valid disassembly tool for this item or the tool is nearly broken. Auto-disassembling won't run.</text>
+		<text>У вас нет подходящего инструмента для разборки этого предмета, или инструмент почти сломан. Авторазборка не активирована.</text>
 	</string>
 	<string id="st_auto_looter_still_running">
-		<text>Auto looter is still running for this object</text>
+		<text>Автолутер ещё работает</text>
 	</string>
 	<string id="st_auto_looter_remote_looting_disabled">
-		<text>Remote looting disabled</text>
+		<text>Дистанционный лутинг выключен</text>
 	</string>
 	<string id="st_auto_looter_remote_looting_too_far">
-		<text>The target is too far to loot</text>
+		<text>Для запуска дистанционного лутинга подойдите ближе к цели</text>
 	</string>
 
 	<!-- Context menu on items -->
