@@ -60,7 +60,7 @@
 		<text>Disassemble misc</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_description">
-		<text>Given that some of the misc items' parts are near to worthless and tasks for the whole item might give you some better reward (e. g. porn magazines), you can define below what kind of misc items should and should not be disassembled.</text>
+		<text>Given that some of the misc items' parts are near to worthless and tasks for the whole item might give you some better reward (e. g. porn magazines), you can define below what kind of misc items should and should not be disassembled. PDAs mentioned at the end of the end of the list are referring only to the PDAs dropped by stalkers that can give you random stashes.</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_strip_title">
@@ -125,7 +125,8 @@
 
 	<!-- To do: remove this section once RavenAscendant adds the support for "text" prop for more fields -->
 	<!-- There might be an exception required for the powder can - can't see XMLs defined for it -->
-	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name) -->
+	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name),  -->
+	<!-- PDAs (existing XMLs don't mention whether they are common, uncommon or rare) -->
 	<string id="ui_mcm_auto_looter_disassemble_misc_porn">
 		<text>Russian PLAYBOY</text>
 	</string>
@@ -197,5 +198,14 @@
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_sleepbag">
 		<text>Sleeping bag</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_common">
+		<text>PDA - Common</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_uncommon">
+		<text>PDA - Uncommon</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_rare">
+		<text>PDA - Rare</text>
 	</string>
 </string_table>

@@ -125,7 +125,8 @@
 
 	<!-- To do: remove this section once RavenAscendant adds the support for "text" prop for more fields -->
 	<!-- There might be an exception required for the powder can - can't see XMLs defined for it -->
-	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name) -->																																						
+	<!-- Other exceptions: Guitar (section: guitar_a, string id: st_guitar_name), Sleeping bag (section: itm_sleepbag, string id: st_itm_sleepbag_name),  -->
+	<!-- PDAs (existing XMLs don't mention whether they are common, uncommon or rare) -->																																					
 	<string id="ui_mcm_auto_looter_disassemble_misc_porn">
 		<text>Журнал «Русский PLAYBOY»</text>
 	</string>
@@ -197,5 +198,14 @@
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_sleepbag">
 		<text>Спальный мешок</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_common">
+		<text>PDA - Common</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_uncommon">
+		<text>PDA - Uncommon</text>
+	</string>
+	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_rare">
+		<text>PDA - Rare</text>
 	</string>
 </string_table>

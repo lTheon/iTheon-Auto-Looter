@@ -47,7 +47,10 @@ disassemble_misc_items_defaults = {
 
 	guitar_a = true,
 	compression_bag = true,
-	itm_sleepbag = false
+	itm_sleepbag = false,
+	itm_pda_common = false,
+	itm_pda_uncommon = false,
+	itm_pda_rare = false
 }
 
 loot_part_options = {
@@ -118,14 +121,19 @@ op = {
 		{id = "disassemble_misc_title", type = "desc", text="ui_mcm_auto_looter_disassemble_misc_title"},
 		{id = "disassemble_misc_description", type = "desc", text="ui_mcm_auto_looter_disassemble_misc_description"},
 		unpack((function () 
+			local keys = {}
+			for k, _ in pairs(disassemble_misc_items_defaults) do
+				table.insert(keys, k)
+			end
+			table.sort(keys)
 			local result = {}
-			for k, v in pairs(disassemble_misc_items_defaults) do
+			for _, v in pairs(keys) do
 				table.insert(result, {
-					id = "disassemble_misc_" .. k,
-					text = "st_" .. k,
+					id = "disassemble_misc_" .. v,
+					text = "st_" .. v,
 					type = "check",
 					val = 1,
-					def = v
+					def = disassemble_misc_items_defaults[v]
 				})
 			end
 			return result
