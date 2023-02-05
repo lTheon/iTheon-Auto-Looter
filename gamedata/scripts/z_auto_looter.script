@@ -18,7 +18,7 @@ local function load_defaults()
 	return t
 end
 -- Default config
-local config = load_defaults()
+config = load_defaults()
 
 local function load_settings()
 	config = load_defaults()
@@ -78,10 +78,14 @@ function get_actor()
 	end
 end
 
-function auto_looter(key)
-	if not is_right_key(key) then return end
-	local actor = get_actor()
-	if not actor then return end
+-- Second param is used for proximity looting processing - EXPERIMENTAL FEATURE
+function auto_looter(key, experimental_actor)
+	local actor = experimental_actor
+	if not experimental_actor then
+		if not is_right_key(key) then return end
+		actor = get_actor()
+		if not actor then return end
+	end
 
 	-- Prevent execution if looter is already running for a given actor
 	if actors_being_processed[actor:id()] then 
