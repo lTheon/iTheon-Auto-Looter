@@ -59,6 +59,8 @@ loot_part_options = {
 -- Default config
 config = {
 	remote_looting_distance = 0,
+	proximity_looting_distance = 0,
+	proximity_looting_refire_time = 2,
 	looter_key = DIK_keys.DIK_LMENU,
 
 	-- Ammo
@@ -87,6 +89,11 @@ op = {
         {id = "remote_looting_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_remote_looting_title"},
 		{id = "remote_looting_description", type = "desc", text="ui_mcm_auto_looter_remote_looting_description"},
         {id = "remote_looting_distance", type = "track", val = 2, min = 0, max = 50, step = 0.5, def = config.remote_looting_distance},
+
+		{id = "proximity_looting_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_proximity_looting_title"},
+		{id = "proximity_looting_description", type = "desc", text="ui_mcm_auto_looter_proximity_looting_description"},
+        {id = "proximity_looting_distance", type = "track", val = 2, min = 0, max = 10, step = 0.5, def = config.proximity_looting_distance},
+		{id = "proximity_looting_refire_time", type = "track", val = 2, min = 1, max = 20, step = 0.5, def = config.proximity_looting_refire_time},
     	{id = "divider", type = "line"},
 
 		{id = "disassemble_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_disassemble_title"},

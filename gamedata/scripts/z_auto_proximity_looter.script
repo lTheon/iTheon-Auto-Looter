@@ -1,0 +1,29 @@
+-- Experimental feature
+local processed_entites = {}
+local counter = 1
+function process_available_entities()
+    -- Don't want to fuck with toggling feature - time events will be generated at all times, but looter will only procc
+    -- when the right option is ticked in MCM
+    CreateTimeEvent("auto_proximity_looter", counter, z_auto_looter.config.proximity_looting_refire_time, function ()
+        counter = counter + 1
+        local actor = db.actor
+        if actor and z_auto_looter.config.proximity_looting_distance > 0 then
+            level.iterate_nearest(db.actor:position(), z_auto_looter.config.proximity_looting_distance, function (obj)
+                local id = obj:id()
+                if not processed_entites[id] then
+                    -- Push all the entites that were iterated over at least once to the table to not push XRay too much
+                    processed_entites[obj:id()] = true
+                    if IsStalker(obj) and not obj:alive() then
+                        z_auto_looter.auto_looter(nil, obj)
+                    end
+                end
+            end)
+        end
+        process_available_entities()
+        return true
+    end)
+end
+
+function on_game_start()
+    RegisterScriptCallback("on_game_load", process_available_entities)
+end

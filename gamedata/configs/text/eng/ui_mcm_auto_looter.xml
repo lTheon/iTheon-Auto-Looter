@@ -22,10 +22,23 @@
 		<text>Remote looting</text>
 	</string>
 	<string id="ui_mcm_auto_looter_remote_looting_description">
-		<text>Set the max distance at which remote looting should be possible. Setting it to 0 will disable remote looting. WARNING: Auto-looting should not be enabled if you're using mods that fire additional scripts on opening dead stalker/box inventories. Gamma players should always have it turned off</text>
+		<text>Set the max distance at which remote looting should be possible. Setting it to 0 will disable remote looting. WARNING: Remote-looting should not be enabled if you're using mods that fire additional scripts on opening dead stalker/box inventories. Gamma players should always have it turned off.</text>
 	</string>
 	<string id="ui_mcm_auto_looter_remote_looting_distance">
 		<text>Max distance</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_proximity_looting_title">
+		<text>EXPERIMENTAL: Proximity looting</text>
+	</string>
+	<string id="ui_mcm_auto_looter_proximity_looting_description">
+		<text>Proximity looting works in a similar manner to the remote looting, but the difference is that it refires automatically with configurable invervals and iterates over all lootable bodies (inventory boxes excluded to not loot your own stashes) in a given range. Setting range to 0 will disable proximity looting. WARNING: Proximity-looting should not be enabled if you're using mods that fire additional scripts on opening dead stalker inventories. Gamma players should always have it turned off.</text>
+	</string>
+	<string id="ui_mcm_auto_looter_proximity_looting_distance">
+		<text>Proximity looting range</text>
+	</string>
+	<string id="ui_mcm_auto_looter_proximity_looting_refire_time">
+		<text>Proximity looting interval</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_disassemble_title">
