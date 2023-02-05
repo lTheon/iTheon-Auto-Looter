@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.9
+# iTheon-Auto-Looter - v0.1.9a
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -20,6 +20,9 @@ Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
+
+v0.1.9a
+- Bring back no disassembly tool message configuration (lost during reverting some stuff)
 
 v0.1.9
 - Fix looter stutters/infinite loop on empty dead bodies
