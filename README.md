@@ -22,6 +22,9 @@ Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
 
+v0.1.11
+-Fix mag ejection for mags users
+
 v0.1.10
 - Add delete feature
 
