@@ -11,7 +11,7 @@ https://www.moddb.com/mods/stalker-anomaly/addons/crafting-info-in-tooltips <br>
 Or simply play GAMMA :)
 
 Disassemble animations should be turned off to not cause CTDs/busy hands <br>
-Things you can configure - disassembling items (different options per item type), stripping weapon parts and attachments, looting stuff, remote looting range.
+Things you can configure - disassembling items (different options per item type), stripping weapon parts and attachments, looting stuff, remote looting range, deleting items (get rid of piles of dead bodies).
 
 Given a large amount of possible combinations, I'm pretty sure it's almost impossible for me to test everything myself, though a big chunk of time was spent on that anyway. That's why the initial version is set to **v0.1**, as there might be some minor bugs to fix that I did not catch.
 
@@ -21,6 +21,9 @@ Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
+
+v0.1.10
+- Add delete feature
 
 v0.1.9a
 - Bring back no disassembly tool message configuration (lost during reverting some stuff)
