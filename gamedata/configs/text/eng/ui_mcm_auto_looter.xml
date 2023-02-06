@@ -5,7 +5,7 @@
 		<text>Auto Looter</text>
 	</string>
 	<string id="ui_mcm_auto_looter_base_description">
-		<text>Auto looter performs actions in a specific order: Disassembling -> Part/Attachment stripping -> Looting. I. e. if you turn on the disassembling for armors, the parts received out of it will later be subjected to additional condition check before looting if it's also enabled.</text>
+		<text>Auto looter performs actions in a specific order: Disassembling -> Part/Attachment stripping -> Looting -> Deleting. I. e. if you turn on the disassembling for armors, the parts received out of it will later be subjected to additional condition check before looting if it's also enabled.</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_looter_key_title">
