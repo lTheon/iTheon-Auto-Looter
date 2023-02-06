@@ -96,22 +96,22 @@
 	</string>
 
 	<string id="ui_mcm_auto_looter_delete_title">
-		<text>Deleting settings</text>
+		<text>Настройки удаления</text>
 	</string>
 	<string id="ui_mcm_auto_looter_delete_description">
-		<text>Bodies that pile up are cool till they start impacting the performance. Settings below allow you to automatically delete looted bodies or items that you're sure you're never going to pick up but will still impact the performance by just being inside the looted stashes. "Delete rest" usually refers to weapon and armor parts that were not picked up by the looter.</text>
+		<text>Большое количество трупов - это круто! Но до тех пор, пока они не влияют на производительность. Настройки ниже позволяют автоматически удалять тела, которые вы уже облутали, а также предметы, которые вы не подобрали из тел или контейнеров, но которые всё равно влияют на производительность. Опция "Удалять остатки" обычно относятся к компонентам оружия и брони, которые не были подобраны автолутером</text>
 	</string>
 	<string id="ui_mcm_auto_looter_delete_body">
-		<text>Delete whole body</text>
+		<text>Удалять тела</text>
 	</string>
 	<string id="ui_mcm_auto_looter_delete_armor">
-		<text>Delete outfits and headgears</text>
+		<text>Удалять броню и шлемы</text>
 	</string>
 	<string id="ui_mcm_auto_looter_delete_weapon">
-		<text>Delete weapons</text>
+		<text>Удалять оружия</text>
 	</string>
 	<string id="ui_mcm_auto_looter_delete_misc">
-		<text>Delete rest</text>
+		<text>Удалять остатки</text>
 	</string>
 
 	<string id="ui_mcm_auto_looter_misc_options_title">
@@ -219,12 +219,12 @@
 		<text>Спальный мешок</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_common">
-		<text>PDA - Common</text>
+		<text>КПК - Обычный</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_uncommon">
-		<text>PDA - Uncommon</text>
+		<text>КПК - Необычный</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_rare">
-		<text>PDA - Rare</text>
+		<text>КПК - Редкий</text>
 	</string>
 </string_table>
