@@ -143,7 +143,11 @@ function handle_unload(actor)
 	local collected_items = collect_items(actor)
 	for k, v in pairs(collected_items) do
 		if IsWeapon(v) then
-			v:force_unload_magazine(true)
+			if mag_support.using_mags() and mag_support.is_mag_loaded(v) then 
+				mag_support.eject_mag(v)
+			else
+				v:force_unload_magazine(true)
+			end
 		end
 	end
 end
