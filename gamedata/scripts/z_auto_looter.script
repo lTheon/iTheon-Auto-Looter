@@ -114,8 +114,12 @@ end
 function continue_looter(actor)
 	CreateTimeEvent("auto_looter_continue", "auto_looter_continue_" .. actor:id(), 0.040, function ()
 		handle_loot(actor)
+		handle_delete(actor)
 		-- Clear looting status for actor - can't use remove function here due to resulting index squashing
-		actors_being_processed[actor:id()] = false
+		-- Actor might have been released through deletion
+		if actor then
+			actors_being_processed[actor:id()] = false
+		end
 		return true
 	end)
 end
@@ -363,7 +367,31 @@ function cond_loot_weapon_part(obj)
 end
 
 function handle_delete(actor)
+	if config.delete_body and IsStalker(actor) and not actor:alive() then
+		actors_being_processed[actor:id()] = false
+		if ui_inventory.GUI:IsShown() then
+			ui_inventory.GUI:Close()
+		end
+		-- The other function works only on objects and living stalkers
+		local sim = alife()
+		sim:release(sim:object(actor:id()))
+		return
+	end
 
+	local collected_items = collect_items(actor)
+	for k, v in pairs(collected_items) do 
+		if IsWeapon(v) then
+			if config.delete_weapon then
+				alife_release(v)
+			end
+		elseif IsOutfit(v) or IsHeadgear(v) then
+			if config.delete_armor then
+				alife_release(v)
+			end
+		elseif config.delete_misc then
+			alife_release(v)
+		end
+	end
 end
 
 local function load_state(mdata)

@@ -73,16 +73,20 @@ config = {
 	-- Armor
 	disassemble_armor = disassemble_armor_options.none,
 	loot_armor_parts = loot_part_options.usable,
+	delete_armor = false,
 	-- Weapon
 	disassemble_weapon = disassemble_weapon_options.none,
 	strip_weapon = strip_weapon_options.usable_parts,
 	strip_attachments = true,
 	loot_weapon_parts = loot_part_options.usable,
+	delete_weapon = false,
 	-- Misc
 	disassemble_misc = disassemble_misc_items_defaults,
+	delete_misc = false, -- Actually delete rest
 
 	-------------- Misc options (not misc items)
-	no_valid_tool_messaging = true
+	no_valid_tool_messaging = true,
+	delete_body = false
 }
 
 op = {
@@ -174,6 +178,14 @@ local rest = {
 		{loot_part_options.none, "auto_looter_none_label"},
 		}
 	},
+	{id = "divider", type = "line"},
+
+	{id = "delete_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_delete_title"},
+	{id = "delete_description", type = "desc", text="ui_mcm_auto_looter_delete_description"},
+	{id = "delete_body", type = "check", val = 1, def = config.delete_body},
+	{id = "delete_armor", type = "check", val = 1, def = config.delete_armor},
+	{id = "delete_weapon", type = "check", val = 1, def = config.delete_weapon},
+	{id = "delete_misc", type = "check", val = 1, def = config.delete_misc},
 	{id = "divider", type = "line"},
 
 	{id = "misc_options_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_misc_options_title"},

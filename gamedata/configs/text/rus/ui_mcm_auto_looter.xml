@@ -95,6 +95,25 @@
 		<text>Брать компоненты оружия</text>
 	</string>
 
+	<string id="ui_mcm_auto_looter_delete_title">
+		<text>Deleting settings</text>
+	</string>
+	<string id="ui_mcm_auto_looter_delete_description">
+		<text>Bodies that pile up are cool till they start impacting the performance. Settings below allow you to automatically delete looted bodies or items that you're sure you're never going to pick up but will still impact the performance by just being inside the looted stashes. "Delete rest" usually refers to weapon and armor parts that were not picked up by the looter.</text>
+	</string>
+	<string id="ui_mcm_auto_looter_delete_body">
+		<text>Delete whole body</text>
+	</string>
+	<string id="ui_mcm_auto_looter_delete_armor">
+		<text>Delete outfits and headgears</text>
+	</string>
+	<string id="ui_mcm_auto_looter_delete_weapon">
+		<text>Delete weapons</text>
+	</string>
+	<string id="ui_mcm_auto_looter_delete_misc">
+		<text>Delete rest</text>
+	</string>
+
 	<string id="ui_mcm_auto_looter_misc_options_title">
 		<text>Другие настройки</text>
 	</string>
