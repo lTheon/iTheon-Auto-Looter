@@ -116,13 +116,13 @@ function continue_looter(actor)
 		handle_loot(actor)
 		CreateTimeEvent("auto_looter_delay_deleting", "auto_looter_delay_deleting_" .. actor:id(), 0.05, function ()
 			handle_delete(actor)
+			-- Clear looting status for actor - can't use remove function here due to resulting index squashing
+			-- Actor might have been released through deletion
 			if actor then
 				actors_being_processed[actor:id()] = false
 			end
 			return true
 		end)
-		-- Clear looting status for actor - can't use remove function here due to resulting index squashing
-		-- Actor might have been released through deletion
 		return true
 	end)
 end
