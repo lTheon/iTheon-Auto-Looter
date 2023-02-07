@@ -223,7 +223,7 @@ function cond_armor_disassemble(obj)
 	if config.disassemble_armor == disassemble_armor_options.with_usable_parts then
 		local parts = item_parts.get_parts_con(obj, nil, true)
 		for k, v in pairs(parts) do
-			local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
+			local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(k))
 			if is_recipe_material or (v >= 50 and IsItem("part", k)) then
 				return true
 			end
