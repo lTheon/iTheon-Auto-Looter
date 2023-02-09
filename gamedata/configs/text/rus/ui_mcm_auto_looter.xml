@@ -85,9 +85,6 @@
 	<string id="ui_mcm_auto_looter_loot_ammo_parts">
 		<text>����� ���������� ��������</text>
 	</string>
-	<string id="ui_mcm_auto_looter_loot_magazines">
-		<text>Loot magazines</text>
-	</string>
 	<string id="ui_mcm_auto_looter_loot_armor_parts">
 		<text>����� ���������� �����</text>
 	</string>
