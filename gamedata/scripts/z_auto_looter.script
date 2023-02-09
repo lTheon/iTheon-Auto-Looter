@@ -336,6 +336,8 @@ function handle_loot(actor)
 		elseif IsOutfit(v) or IsHeadgear(v) or IsWeapon(v) then
 			-- Not looting these
 			should_loot = false
+		elseif magazine_binder and magazine_binder.is_magazine(v) then
+			should_loot = config.loot_magazines
 		else
 			local sec = v:section()
 			if string.find(sec, "prt_o_") then
