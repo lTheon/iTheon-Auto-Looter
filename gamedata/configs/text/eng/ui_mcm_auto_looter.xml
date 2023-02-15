@@ -97,6 +97,9 @@
 	<string id="ui_mcm_auto_looter_loot_weapon_parts">
 		<text>Loot weapon parts</text>
 	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_title">
+		<text>Loot misc</text>
+	</string>
 
 	<string id="ui_mcm_auto_looter_delete_title">
 		<text>Deleting settings</text>
@@ -228,6 +231,89 @@
 		<text>PDA - Uncommon</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_rare">
+		<text>PDA - Rare</text>
+	</string>
+
+
+	<string id="ui_mcm_auto_looter_loot_misc_porn">
+		<text>Russian PLAYBOY</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_porn2">
+		<text>Ukrainian MAXIM</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_beadspread">
+		<text>Bed spread</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_synthrope">
+		<text>2 synthetic ropes</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_tarpaulin">
+		<text>Camouflaged tarpaulin</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_underwear">
+		<text>Soaked underwear</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_shovel_old">
+		<text>Metal shovel</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_shovel_mili">
+		<text>Military field shovel</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_ball_hammer">
+		<text>Ball-peen hammer</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_boots">
+		<text>Leather boots</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_broken_detector">
+		<text>Broken detector</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cutlery">
+		<text>Field cutlery</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_explo_metalcan_powder">
+		<text>Powder can</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_flashlight_broken">
+		<text>Broken flashlight</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_gloves">
+		<text>Leather gloves</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_hand_watch">
+		<text>Hand watch</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_headlamp">
+		<text>Old head lamp</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mirror">
+		<text>Telescopic mirror</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_radio">
+		<text>Small radio</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_radio2">
+		<text>Broken radio</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_walkie">
+		<text>Walkie talkie</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_guitar_a">
+		<text>Guitar</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_compression_bag">
+		<text>Compression bag</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_sleepbag">
+		<text>Sleeping bag</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_common">
+		<text>PDA - Common</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_uncommon">
+		<text>PDA - Uncommon</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_rare">
 		<text>PDA - Rare</text>
 	</string>
 </string_table>
