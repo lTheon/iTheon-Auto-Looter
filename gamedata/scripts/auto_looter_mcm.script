@@ -53,6 +53,37 @@ disassemble_misc_items_defaults = {
 	itm_pda_rare = false
 }
 
+loot_misc_items_defaults = {
+	porn = true, -- Russian PLAYBOY
+	porn2 = true, -- Ukrainian MAXIM
+	beadspread = true,
+	synthrope = true,
+	tarpaulin = true,
+	underwear = true,
+	shovel_old = true, -- Metal shovel
+	shovel_mili = true, -- Military field shovel
+	ball_hammer = true,
+	boots = true, -- Leather boots
+	broken_detector = true,
+	cutlery = true,
+	explo_metalcan_powder = true,
+	flashlight_broken = true,
+	gloves = true, -- Leather gloves
+	hand_watch = true,
+	headlamp = true, -- Old headlamp
+	mirror = true, -- Telescopic mirror
+	radio = true, -- Small radio
+	radio2 = true, -- Broken radio
+	walkie = true, -- Walkie talkie
+
+	guitar_a = true,
+	compression_bag = true,
+	itm_sleepbag = true,
+	itm_pda_common = true,
+	itm_pda_uncommon = true,
+	itm_pda_rare = true
+}
+
 loot_part_options = {
 	all = 'all',
 	usable = 'usable',
@@ -83,6 +114,7 @@ config = {
 	-- Misc
 	disassemble_misc = disassemble_misc_items_defaults,
 	delete_misc = false, -- Actually delete rest
+	loot_misc = loot_misc_items_defaults,
 
 	-------------- Misc options (not misc items)
 	no_valid_tool_messaging = true,
@@ -180,6 +212,28 @@ local rest = {
 		{loot_part_options.none, "auto_looter_none_label"},
 		}
 	},
+	{id = "loot_misc_title", type = "desc", text="ui_mcm_auto_looter_loot_misc_title"},
+	unpack((function () 
+		local keys = {}
+		for k, _ in pairs(loot_misc_items_defaults) do
+			table.insert(keys, k)
+		end
+		table.sort(keys)
+		local result = {}
+		for _, v in pairs(keys) do
+			table.insert(result, {
+				id = "loot_misc_" .. v,
+				text = "st_" .. v,
+				type = "check",
+				val = 1,
+				def = loot_misc_items_defaults[v]
+			})
+		end
+		return result
+	end)())
+}
+
+local rest1 = {
 	{id = "divider", type = "line"},
 
 	{id = "delete_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_delete_title"},
@@ -194,10 +248,18 @@ local rest = {
 	{id = "no_valid_tool_messaging", type = "check", val = 1, def = config.no_valid_tool_messaging},
 }
 
-for _, v in pairs(rest) do
-	table.insert(op.gr, v)
+
+function concat(...)
+	for _, arr in ipairs({...}) do
+		printf(_)
+		for _, v in ipairs(arr) do
+			printf(v.id)
+			table.insert(op.gr, v)
+		end
+	end
 end
 
+concat(rest, rest1)
 
 function on_mcm_load()
     return op

@@ -21,4 +21,11 @@
 	<string id="st_auto_looter_disable_auto_disassemble">
 		<text>Disable auto-disassemble</text>
 	</string>
+
+	<string id="st_auto_looter_enable_auto_loot">
+		<text>Enable auto-loot</text>
+	</string>
+	<string id="st_auto_looter_disable_auto_loot">
+		<text>Disable auto-loot</text>
+	</string>
 </string_table>
