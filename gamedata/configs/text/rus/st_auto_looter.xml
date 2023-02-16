@@ -16,9 +16,15 @@
 
 	<!-- Context menu on items -->
 	<string id="st_auto_looter_enable_auto_disassemble">
-		<text>Enable auto-disassemble</text>
+		<text>Включить авторазборку</text>
 	</string>
 	<string id="st_auto_looter_disable_auto_disassemble">
-		<text>Disable auto-disassemble</text>
+		<text>Отключить авторазборку</text>
+	</string>
+	<string id="st_auto_looter_enable_auto_loot">
+		<text>Включить автолутер</text>
+	</string>
+	<string id="st_auto_looter_disable_auto_loot">
+		<text>Отключить автолутер</text>
 	</string>
 </string_table>
