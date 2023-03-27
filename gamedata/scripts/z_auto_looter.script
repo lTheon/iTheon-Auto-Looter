@@ -104,9 +104,6 @@ function auto_looter(key, experimental_actor)
 	-- Delays required for new state to be processed correctly by the engine
 	CreateTimeEvent("auto_looter_delayed_disassembling", "auto_looter_delayed_disassembling_" .. actor:id(), 0.01, function ()
 		handle_disassemble(actor)
-		return true
-	end)
-	CreateTimeEvent("auto_looter_delayed_stripping", "auto_looter_delayed_stripping_" .. actor:id(), 0.02, function ()
 		handle_strip(actor)
 		return true
 	end)
