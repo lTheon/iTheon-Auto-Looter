@@ -13,6 +13,9 @@
 	<string id="st_auto_looter_remote_looting_too_far">
 		<text>The target is too far to loot</text>
 	</string>
+	<string id="st_auto_looter_parts_not_stripped">
+		<text>Weapon parts could not be stripped automatically (part creation has been delayed by some other script). Re-run the looter to attempt stripping again.</text>
+	</string>
 
 	<!-- Context menu on items -->
 	<string id="st_auto_looter_enable_auto_disassemble">
