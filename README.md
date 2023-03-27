@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.16
+# iTheon-Auto-Looter - v0.1.17
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -21,6 +21,11 @@ Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
+
+v0.1.17
+- Strengthen failsafe on part stripping
+- Make looting bolts/cartridges configurable
+- Disable auto looting placable stashes
 
 v0.1.16
 
