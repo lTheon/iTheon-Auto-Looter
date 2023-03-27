@@ -60,6 +60,11 @@ function is_right_key(key)
 	return key == config.looter_key
 end
 
+function is_placable_stash(actor) 
+	local placeable_type = ini_sys:r_string_ex(actor:section(), "placeable_type")
+	return placeable_type == "stash"
+end
+
 function get_actor()
 	-- To do: refactor if any more changes will be required - actor retrieval is ugly
 	-- Standard looting
@@ -88,7 +93,7 @@ function auto_looter(key, experimental_actor)
 	if not experimental_actor then
 		if not is_right_key(key) then return end
 		actor = get_actor()
-		if not actor then return end
+		if not actor or is_placable_stash(actor) then return end
 	end
 
 	-- Prevent execution if looter is already running for a given actor
@@ -104,7 +109,10 @@ function auto_looter(key, experimental_actor)
 	-- Delays required for new state to be processed correctly by the engine
 	CreateTimeEvent("auto_looter_delayed_disassembling", "auto_looter_delayed_disassembling_" .. actor:id(), 0.01, function ()
 		handle_disassemble(actor)
-		handle_strip(actor)
+		CreateTimeEvent("auto_looter_delayed_stripping", "auto_looter_delayed_stripping_" .. actor:id(), 0.01, function ()
+			handle_strip(actor)
+			return true
+		end)
 		return true
 	end)
 end
