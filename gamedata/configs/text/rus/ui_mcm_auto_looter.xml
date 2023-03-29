@@ -83,7 +83,7 @@
 		<text>Брать патроны</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_ammo_parts">
-		<text>Брать компоненты патронов</text>				 
+		<text>Брать компоненты патронов</text>					 
 	</string>
 	<string id="ui_mcm_auto_looter_loot_magazines">
 		<text>Брать магазины</text>
@@ -98,7 +98,7 @@
 		<text>Брать компоненты оружия</text>		
 	</string>
 	<string id="ui_mcm_auto_looter_loot_misc_title">
-		<text>Брать разное</text>
+		<text>Брать разное/text>
 	</string>
 	<string id="ui_mcm_auto_looter_delete_title">
 		<text>Настройки удаления</text>
@@ -230,10 +230,8 @@
 		<text>КПК - Необычный</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_rare">
-		<text>КПК - Редкий</text>				  
+		<text>КПК - Редкий</text>					
 	</string>
-	
-	
 	<string id="ui_mcm_auto_looter_loot_misc_porn">
 		<text>Журнал «Русский PLAYBOY»</text>
 	</string>
@@ -295,7 +293,13 @@
 		<text>Переносное радио</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_misc_walkie">
-		<text>Рация «Walkie»</text>
+		<text>Рация «Walkie»</text>		
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bolt">
+		<text>Болт</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bolt_bullet">
+		<text>Гильза</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_misc_guitar_a">
 		<text>Гитара</text>
@@ -313,6 +317,6 @@
 		<text>КПК - Необычный</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_rare">
-		<text>КПК - Редкий</text>
-	</string>												  
+		<text>КПК - Редкий</text>		
+	</string>
 </string_table>
