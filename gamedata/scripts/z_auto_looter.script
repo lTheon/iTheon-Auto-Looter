@@ -60,12 +60,21 @@ function is_right_key(key)
 	return key == config.looter_key
 end
 
-function get_actor() 
+function is_placable_stash(actor) 
+	local placeable_type = ini_sys:r_string_ex(actor:section(), "placeable_type")
+	return placeable_type == "stash"
+end
+
+function get_actor()
+	-- To do: refactor if any more changes will be required - actor retrieval is ugly
+	-- Standard looting
 	local last_mode = actor_menu.get_last_mode()
-	if valid_modes[last_mode] then
-		return level.object_by_id(ui_inventory.GUI.npc_id)
+	local object_being_looted = level.object_by_id(ui_inventory.GUI.npc_id)
+	if object_being_looted and (not object_being_looted:alive()) and valid_modes[last_mode] then
+		return object_being_looted
 	end
 
+	-- Remote looting
 	local target = level.get_target_obj()
 	if target and (IsStalker(target) and not target:alive() or IsInvbox(target)) then
 		if config.remote_looting_distance == 0 then
@@ -84,7 +93,7 @@ function auto_looter(key, experimental_actor)
 	if not experimental_actor then
 		if not is_right_key(key) then return end
 		actor = get_actor()
-		if not actor then return end
+		if not actor or is_placable_stash(actor) then return end
 	end
 
 	-- Prevent execution if looter is already running for a given actor
@@ -100,10 +109,10 @@ function auto_looter(key, experimental_actor)
 	-- Delays required for new state to be processed correctly by the engine
 	CreateTimeEvent("auto_looter_delayed_disassembling", "auto_looter_delayed_disassembling_" .. actor:id(), 0.01, function ()
 		handle_disassemble(actor)
-		return true
-	end)
-	CreateTimeEvent("auto_looter_delayed_stripping", "auto_looter_delayed_stripping_" .. actor:id(), 0.02, function ()
-		handle_strip(actor)
+		CreateTimeEvent("auto_looter_delayed_stripping", "auto_looter_delayed_stripping_" .. actor:id(), 0.01, function ()
+			handle_strip(actor)
+			return true
+		end)
 		return true
 	end)
 end
@@ -260,17 +269,23 @@ function handle_strip(actor)
 		if IsWeapon(wpn) then
 			if zzzz_arti_jamming_repairs then
 				-- Gauss CTD fix
+				local parts_not_stripped = false
 				if not has_parts(wpn) then
 
-				elseif config.strip_weapon == strip_weapon_options.all then
-					item_parts.get_parts_con(wpn, nil, true) -- required to force generating parts in new bodies - CTD failsafe
-					zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
-				elseif config.strip_weapon == strip_weapon_options.usable_parts then
-					local parts = item_parts.get_parts_con(wpn, nil, true) or {} -- failsafe
-					for part_section, part_con in pairs(parts) do
-						if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
-							zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
+				else 
+					local parts = item_parts.get_parts_con(wpn, nil, true)
+					if parts then
+						if config.strip_weapon == strip_weapon_options.all then
+							zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
+						elseif config.strip_weapon == strip_weapon_options.usable_parts then
+							for part_section, part_con in pairs(parts) do
+								if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
+									zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
+								end
+							end
 						end
+					else
+						news_manager.send_tip(db.actor, game.translate_string("st_auto_looter_parts_not_stripped"), nil, "swiss_knife", 6000)
 					end
 				end
 			end

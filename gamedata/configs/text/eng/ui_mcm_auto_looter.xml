@@ -298,6 +298,12 @@
 	<string id="ui_mcm_auto_looter_loot_misc_walkie">
 		<text>Walkie talkie</text>
 	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bolt">
+		<text>Bolt</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bolt_bullet">
+		<text>Empty cartridge</text>
+	</string>
 	<string id="ui_mcm_auto_looter_loot_misc_guitar_a">
 		<text>Guitar</text>
 	</string>

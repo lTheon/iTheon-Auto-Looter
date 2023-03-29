@@ -75,6 +75,8 @@ loot_misc_items_defaults = {
 	radio = true, -- Small radio
 	radio2 = true, -- Broken radio
 	walkie = true, -- Walkie talkie
+	bolt = false,
+	bolt_bullet = false,
 
 	guitar_a = true,
 	compression_bag = true,
