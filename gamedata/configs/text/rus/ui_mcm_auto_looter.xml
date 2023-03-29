@@ -83,7 +83,10 @@
 		<text>Брать патроны</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_ammo_parts">
-		<text>Брать компоненты патронов</text>
+		<text>Брать компоненты патронов</text>					 
+	</string>
+	<string id="ui_mcm_auto_looter_loot_magazines">
+		<text>Брать магазины</text>
 	</string>
 	<string id="ui_mcm_auto_looter_loot_armor_parts">
 		<text>Брать компоненты брони</text>
@@ -92,9 +95,11 @@
 		<text>Используемые компоненты брони — компоненты, состояние которых выше 50%, или те, которые можно использовать в рецептах.</text>
 	</string>  
 	<string id="ui_mcm_auto_looter_loot_weapon_parts">
-		<text>Брать компоненты оружия</text>
+		<text>Брать компоненты оружия</text>		
 	</string>
-
+	<string id="ui_mcm_auto_looter_loot_misc_title">
+		<text>Брать разное/text>
+	</string>
 	<string id="ui_mcm_auto_looter_delete_title">
 		<text>Настройки удаления</text>
 	</string>
@@ -225,6 +230,93 @@
 		<text>КПК - Необычный</text>
 	</string>
 	<string id="ui_mcm_auto_looter_disassemble_misc_itm_pda_rare">
-		<text>КПК - Редкий</text>
+		<text>КПК - Редкий</text>					
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_porn">
+		<text>Журнал «Русский PLAYBOY»</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_porn2">
+		<text>Украинский журнал «MAXIM»</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_beadspread">
+		<text>Покрывало</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_synthrope">
+		<text>Два синтетических каната</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_tarpaulin">
+		<text>Камуфляжный брезент</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_underwear">
+		<text>Нижнее бельё</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_shovel_old">
+		<text>Металлическая лопата</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_shovel_mili">
+		<text>Сапёрная лопатка</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_ball_hammer">
+		<text>Шариковый молоток</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_boots">
+		<text>Кожаные ботинки</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_broken_detector">
+		<text>Сломанный детектор</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cutlery">
+		<text>Полевые столовые приборы</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_explo_metalcan_powder">
+		<text>Баллончик с порошком</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_flashlight_broken">
+		<text>Разбитый фонарь</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_gloves">
+		<text>Кожаные перчатки</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_hand_watch">
+		<text>Наручные часы</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_headlamp">
+		<text>Старая лампа фонарика</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mirror">
+		<text>Телескопическое зеркало</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_radio">
+		<text>Сломанное радио</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_radio2">
+		<text>Переносное радио</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_walkie">
+		<text>Рация «Walkie»</text>		
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bolt">
+		<text>Болт</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bolt_bullet">
+		<text>Гильза</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_guitar_a">
+		<text>Гитара</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_compression_bag">
+		<text>Компрессионный мешок</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_sleepbag">
+		<text>Спальный мешок</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_common">
+		<text>КПК - Обычный</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_uncommon">
+		<text>КПК - Необычный</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_rare">
+		<text>КПК - Редкий</text>		
 	</string>
 </string_table>

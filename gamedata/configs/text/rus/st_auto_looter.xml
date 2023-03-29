@@ -11,14 +11,22 @@
 		<text>Дистанционный лутинг выключен</text>
 	</string>
 	<string id="st_auto_looter_remote_looting_too_far">
-		<text>Для запуска дистанционного лутинга подойдите ближе к цели</text>
+		<text>Для запуска дистанционного лутинга подойдите ближе к цели</text>																																						
 	</string>
-
+	<string id="st_auto_looter_parts_not_stripped">
+		<text>Части оружия не были автоматически разобраны (процесс создания деталей занят каким-то другим скриптом). Повторно запустите лутер, чтобы снова попытаться разобрать предмет.</text>
+	</string>
 	<!-- Context menu on items -->
 	<string id="st_auto_looter_enable_auto_disassemble">
 		<text>Enable auto-disassemble</text>
 	</string>
 	<string id="st_auto_looter_disable_auto_disassemble">
 		<text>Disable auto-disassemble</text>
+	</string>
+	<string id="st_auto_looter_enable_auto_loot">
+		<text>Вкелючить автолутер</text>
+	</string>
+	<string id="st_auto_looter_disable_auto_loot">
+		<text>Отключить автолутер</text>
 	</string>
 </string_table>
