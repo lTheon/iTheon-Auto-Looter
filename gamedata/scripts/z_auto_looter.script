@@ -233,7 +233,8 @@ function cond_armor_disassemble(obj)
 		local parts = item_parts.get_parts_con(obj, nil, true)
 		for k, v in pairs(parts) do
 			local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(k))
-			if is_recipe_material or (v >= 50 and IsItem("part", k)) then
+			if (config.always_treat_recipe_part_as_usable and is_recipe_material) 
+			or (v >= config.usable_armor_part_condition_treshold and IsItem("part", k)) then
 				return true
 			end
 		end
@@ -250,7 +251,7 @@ function cond_weapon_disassemble(obj)
 	elseif config.disassemble_weapon == disassemble_weapon_options.with_usable_barrel then
 		local parts = item_parts.get_parts_con(obj, nil, true)
 		for k, v in pairs(parts) do
-			if string.find(k, "barrel") and v >= 60 then
+			if string.find(k, "barrel") and v >= config.usable_weapon_part_condition_treshold then
 				return true
 			end
 		end
@@ -279,7 +280,9 @@ function handle_strip(actor)
 							zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id())
 						elseif config.strip_weapon == strip_weapon_options.usable_parts then
 							for part_section, part_con in pairs(parts) do
-								if not string.find(part_section, "barrel") and part_con >= 60 and zzzz_arti_jamming_repairs.is_part(part_section) then
+								if not string.find(part_section, "barrel") 
+								and part_con >= config.usable_weapon_part_condition_treshold 
+								and zzzz_arti_jamming_repairs.is_part(part_section) then
 									zzzz_arti_jamming_repairs.act_fieldstrip(wpn:id(), part_section)
 								end
 							end
@@ -374,10 +377,12 @@ end
 
 function cond_loot_armor_part(obj)
 	local con = obj:condition()
+	local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
 	if config.loot_armor_parts == loot_part_options.all then
 		return true
 	elseif config.loot_armor_parts == loot_part_options.usable then
-		return con >= 0.5 or is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
+		return con >= (config.usable_armor_part_condition_treshold / 100) 
+		or (config.always_treat_recipe_part_as_usable and is_recipe_material)
 	end
 	return false
 end
@@ -387,7 +392,7 @@ function cond_loot_weapon_part(obj)
 	if config.loot_weapon_parts == loot_part_options.all then
 		return true
 	elseif config.loot_weapon_parts == loot_part_options.usable then
-		return con >= 0.6
+		return con >= (config.usable_weapon_part_condition_treshold / 100)
 	end
 	return false
 end
