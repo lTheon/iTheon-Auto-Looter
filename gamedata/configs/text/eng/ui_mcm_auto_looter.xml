@@ -126,6 +126,18 @@
 	<string id="ui_mcm_auto_looter_no_valid_tool_messaging">
 		<text>Show message when no valid disassembly tool is available</text>
 	</string>
+	<string id="ui_mcm_auto_looter_usable_armor_part_condition_treshold">
+		<text>Usable armor part condition treshold</text>
+	</string>
+	<string id="ui_mcm_auto_looter_usable_weapon_part_condition_treshold">
+		<text>Usable weapon part condition treshold</text>
+	</string>
+	<string id="ui_mcm_auto_looter_always_treat_recipe_part_as_usable">
+		<text>Always treat recipe part as usable</text>
+	</string>
+	<string id="ui_mcm_auto_looter_always_treat_recipe_part_as_usable_description">
+		<text>Disabling this option will make the looter only consider the condition of the armor part when deciding whether the part is usable. The assertion of usage of the given part in the crafting recipes will be omitted.</text>
+	</string>
 
 	<!-- Dropdown options -->
 	<string id="ui_mcm_lst_auto_looter_all_label">

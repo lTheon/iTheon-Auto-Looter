@@ -106,12 +106,14 @@ config = {
 	-- Armor
 	disassemble_armor = disassemble_armor_options.none,
 	loot_armor_parts = loot_part_options.usable,
+	usable_armor_part_condition_treshold = 50,
 	delete_armor = false,
 	-- Weapon
 	disassemble_weapon = disassemble_weapon_options.none,
 	strip_weapon = strip_weapon_options.usable_parts,
 	strip_attachments = true,
 	loot_weapon_parts = loot_part_options.usable,
+	usable_weapon_part_condition_treshold = 60,
 	delete_weapon = false,
 	-- Misc
 	disassemble_misc = disassemble_misc_items_defaults,
@@ -121,7 +123,8 @@ config = {
 	-------------- Misc options (not misc items)
 	no_valid_tool_messaging = true,
 	delete_body = false,
-	loot_magazines = true
+	loot_magazines = true,
+	always_treat_recipe_part_as_usable = true
 }
 
 op = {
@@ -248,6 +251,9 @@ local rest1 = {
 
 	{id = "misc_options_title", type = "desc", clr = {200, 200, 255, 200}, text="ui_mcm_auto_looter_misc_options_title"},
 	{id = "no_valid_tool_messaging", type = "check", val = 1, def = config.no_valid_tool_messaging},
+	{id = "usable_armor_part_condition_treshold", type = "track", val = 2, min = 0, max = 100, step = 1, def = config.usable_armor_part_condition_treshold},
+	{id = "usable_weapon_part_condition_treshold", type = "track", val = 2, min = 0, max = 100, step = 1, def = config.usable_weapon_part_condition_treshold},
+	{id = "always_treat_recipe_part_as_usable", type = "check", val = 1, def = config.always_treat_recipe_part_as_usable},
 }
 
 
