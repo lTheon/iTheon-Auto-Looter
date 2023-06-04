@@ -334,4 +334,314 @@
 	<string id="ui_mcm_auto_looter_loot_misc_itm_pda_rare">
 		<text>PDA - Rare</text>
 	</string>
+	
+	<string id="ui_mcm_auto_looter_loot_misc_meat_flesh">
+		<text>Flesh Bacon</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_meat_dog">
+		<text>Dog Chops</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_meat_tushkano">
+		<text>Rat Skewers</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_meat_snork">
+		<text>Grilled Snork Hand </text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_dog_meat">
+		<text>Dog Meat</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_snork_hand">
+		<text>Snork Hand</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_krovosos_meat">
+		<text>Bloodsucker Meat</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_lurker_meat">
+		<text>Lurker Meat</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_psevdodog_meat">
+		<text>Pseudodog Meat</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_boar_chop">
+		<text>Boar Chop</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mutant_part_flesh_meat">
+		<text>Flesh Meat</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_rasp_tool">
+		<text>File</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_armor_repair_fa">
+		<text>Emergency Armour Repair Set</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cleaning_kit_p">
+		<text>Handgun Cleaning Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cleaning_kit_r5">
+		<text>Rifle Cleaning Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cleaning_kit_r7">
+		<text>Advanced Weapon Cleaning Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cleaning_kit_s">
+		<text>12ga Cleaning Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_glue_a">
+		<text>Tur Glue</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_glue_b">
+		<text>Zviezda Glue</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_glue_e">
+		<text>M17 Glue</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_gun_oil_ru">
+		<text>Rusak Gun Oil</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_gun_oil_ru_d">
+		<text>Dvojka Gun Oil</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_sewing_kit_a">
+		<text>Advanced Sewing Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_sewing_kit_b">
+		<text>Basic Sewing Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_sewing_kit_h">
+		<text>Heavy Sewing Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_sewing_thread">
+		<text>Basic Sewing Thread</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_sharpening_stones">
+		<text>Three-piece Sharpening Set</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_solvent">
+		<text>Hoppe's No. 9 Gun Oil</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_bottle_metal">
+		<text>Cheap Vodka</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_water_drink">
+		<text>Sparkling Water</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_ground_coffee">
+		<text>Ground Coffee</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_vodka">
+		<text>Nemiroff Vodka</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_vodka2">
+		<text>Putinka Vodka</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_beer">
+		<text>Ukranian Beer</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_coffee_drink">
+		<text>UCC Cold Brew Coffee</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_energy_drink">
+		<text>Energy Drink</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mineral_water">
+		<text>Mineral Water</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_flask">
+		<text>Water Canteen</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_explo_balon_gas">
+		<text>Gas Balloon</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_explo_jerrycan_fuel">
+		<text>Jerrycan</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_device_glowstick_blue">
+		<text>Glowstick Cyan</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_device_glowstick_red">
+		<text>Glowstick Red</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_device_glowstick">
+		<text>Glowstick Green</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_device_glowstick_orange">
+		<text>Glowstick Orange</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_ied_new">
+		<text>IED Chemical</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_ied_rpg_new">
+		<text>IED Warhead</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_mine_new">
+		<text>Mine</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_lead_box">
+		<text>LLMC</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_welding_goggles">
+		<text>Welding Goggles</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_steel_wool">
+		<text>Steel Wool</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_cards">
+		<text>Deck of Cards</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_guitar_a">
+		<text>Guitar</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_harmonica_a">
+		<text>Harmonica</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_prt_i_wood">
+		<text>Wooden Parts</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_prt_i_fasteners">
+		<text>Fasteners</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_prt_i_scrap">
+		<text>Metallic Scrap</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_jar">
+		<text>Plastic Jar</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_box_matches">
+		<text>Matchbox</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_swiss_knife">
+		<text>Pen Knife</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_grooming">
+		<text>Grooming Kit</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_charcoal">
+		<text>Charcoal</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_cooking">
+		<text>Field Cooking Kit</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_rope">
+		<text>Rope</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_grease">
+		<text>Industrial Grease</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_duct_tape">
+		<text>Duct Tape</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_prt_i_textolite">
+		<text>Textolite Base</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_batteries_dead">
+		<text>Battery Pack</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_kerosene">
+		<text>Kerosene</text>
+	</string>
+		<string id="ui_mcm_auto_looter_loot_misc_prt_i_textolite">
+		<text>Textolite Base</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_batteries_dead">
+		<text>Battery Pack</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_kerosene">
+		<text>Kerosene</text>
+	</string>
+		<string id="ui_mcm_auto_looter_loot_misc_prt_i_textolite">
+		<text>Textolite Base</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_batteries_dead">
+		<text>Battery Pack</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_kerosene">
+		<text>Kerosene</text>
+	</string>
+		<string id="ui_mcm_auto_looter_loot_misc_prt_i_textolite">
+		<text>Textolite Base</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_batteries_dead">
+		<text>Battery Pack</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_kerosene">
+		<text>Kerosene</text>
+	</string>
+		<string id="ui_mcm_auto_looter_loot_misc_prt_i_textolite">
+		<text>Textolite Base</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_batteries_dead">
+		<text>Battery Pack</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_kerosene">
+		<text>Kerosene</text>
+	</string>
+		<string id="ui_mcm_auto_looter_loot_misc_prt_i_textolite">
+		<text>Textolite Base</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_batteries_dead">
+		<text>Battery Pack</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_kerosene">
+		<text>Kerosene</text>
+	</string>
+	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_1_magical">
+		<text>Environ Kit Basic</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_2_magical">
+		<text>Environ Kit Advanced</text>
+	</string>
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_3_magical">
+		<text>Environ Kit Fine</text>
+	</string>	
+	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_1_utility">
+		<text>Utility Kit Basic</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_2_utility">
+		<text>Utility Kit Advanced</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_3_utility">
+		<text>Utility Kit Fine</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_1_physical">
+		<text>Armor Kit Basic</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_2_physical">
+		<text>Armor Kit Advanced</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_o_3_physical">
+		<text>Armor Kit Fine</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_1_external">
+		<text>Body Kit Basic</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_2_external">
+		<text>Body Kit Advanced</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_3_external">
+		<text>Body Kit Fine</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_1_internal">
+		<text>Mech Kit Basic</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_2_internal">
+		<text>Mech Kit Advanced</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_3_internal">
+		<text>Mech Kit Fine</text>
+	</string>
+
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_1_optical">
+		<text>Optic Kit Basic</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_2_optical">
+		<text>Optic Kit Advanced</text>
+	</string>	
+	<string id="ui_mcm_auto_looter_loot_misc_upgr_w_3_optical">
+		<text>Optic Kit Fine</text>
+	</string>	
 </string_table>
