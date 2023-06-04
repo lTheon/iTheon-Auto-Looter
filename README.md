@@ -13,7 +13,7 @@ Or simply play GAMMA :)
 Disassemble animations should be turned off to not cause CTDs/busy hands <br>
 Things you can configure - disassembling items (different options per item type), stripping weapon parts and attachments, looting stuff, remote looting range, deleting items (get rid of piles of dead bodies).
 
-Given a large amount of possible combinations, I'm pretty sure it's almost impossible for me to test everything myself, though a big chunk of time was spent on that anyway. That's why the initial version is set to **v0.1**, as there might be some minor bugs to fix that I did not catch.
+There's a fork of this mod made by one of users that includes more configs for misc items looting (swiss knives, weapon/armor upgrade kits, weapon cleaning solvents, etc.). You can donwload it here: https://github.com/dion-perez/iTheon-Auto-Looter/tree/dion-perez-patch-1
 
 Contributors: 
 
