@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.18
+# iTheon-Auto-Looter - v0.1.19
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -7,7 +7,6 @@ It has a semi-hard requirement - https://github.com/lTheon/iTheon-Pick-Best-Disa
 
 Tested in both GAMMA and vanilla Anomaly. To get all you can out of it, you'll need two other mods: <br>
 https://github.com/ahuyn/anomaly-wpo <br>
-https://www.moddb.com/mods/stalker-anomaly/addons/crafting-info-in-tooltips <br>
 Or simply play GAMMA :)
 
 Disassemble animations should be turned off to not cause CTDs/busy hands <br>
@@ -21,6 +20,9 @@ Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above and the MCM banner: Blackgrowl
 
 Changelog:
+
+v0.1.19
+- Add craftable items detection function by Utjan to the core mod
 
 v0.1.18
 - Make usable treshold configurable
