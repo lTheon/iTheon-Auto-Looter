@@ -6,6 +6,7 @@ local disassemble_armor_options = auto_looter_mcm.disassemble_armor_options
 local disassemble_weapon_options = auto_looter_mcm.disassemble_weapon_options
 local strip_weapon_options = auto_looter_mcm.strip_weapon_options
 local loot_part_options = auto_looter_mcm.loot_part_options
+local ini_craft
 
 local function load_defaults()
 	local t = {}
@@ -232,7 +233,7 @@ function cond_armor_disassemble(obj)
 	if config.disassemble_armor == disassemble_armor_options.with_usable_parts then
 		local parts = item_parts.get_parts_con(obj, nil, true)
 		for k, v in pairs(parts) do
-			local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(k))
+			local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(get_craftable_items(k))
 			if (config.always_treat_recipe_part_as_usable and is_recipe_material) 
 			or (v >= config.usable_armor_part_condition_treshold and IsItem("part", k)) then
 				return true
@@ -377,7 +378,7 @@ end
 
 function cond_loot_armor_part(obj)
 	local con = obj:condition()
-	local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(craft_use_in_tooltip_mcm.getCraftableItems(obj:section()))
+	local is_recipe_material = craft_use_in_tooltip_mcm and is_not_empty(get_craftable_items(obj:section()))
 	if config.loot_armor_parts == loot_part_options.all then
 		return true
 	elseif config.loot_armor_parts == loot_part_options.usable then
@@ -483,6 +484,7 @@ end
 
 
 function on_game_start()
+	ini_craft = ini_file("items\\settings\\craft.ltx")
 	local bag_config = {
 		actor_equ = true,
 		actor_belt = true,
@@ -532,4 +534,119 @@ function table_length(tab)
     end
 
     return count
+end
+
+-- Utjan's craftable items function
+local wai_added = {}
+local wai_overrides = {}
+local wai_deletions = {}
+
+if workshop_autoinject then
+	base_add_recipe = workshop_autoinject.add_new_recipe
+	function workshop_autoinject.add_new_recipe(index, sec, recipe_string)
+		local bool = base_add_recipe(index, sec, recipe_string)
+		if bool ~= false then
+			if not wai_added[sec] then
+				wai_added[sec] = {}
+			end
+			local length = #wai_added[sec]
+			wai_added[sec][length + 1] = recipe_string
+		end
+		return bool
+	end
+
+	base_add_override_recipe = workshop_autoinject.add_override_recipe
+	function workshop_autoinject.add_override_recipe(sec, recipe_string, index)
+		local bool = base_add_override_recipe(sec, recipe_string, index)
+		if bool then
+			wai_overrides[sec] = recipe_string
+		end
+		return bool
+	end
+
+	base_remove_recipe = workshop_autoinject.remove_existing_recipes
+	function workshop_autoinject.remove_existing_recipes(sec)
+		local bool = base_remove_recipe(sec)
+		if bool then
+			wai_overrides[sec] = "none"
+		end
+		return bool
+	end
+
+	base_clear_recipe = workshop_autoinject.clear_existing_recipes
+	function workshop_autoinject.clear_existing_recipes(sec)
+		local bool = base_clear_recipe(sec)
+		if bool then
+			wai_deletions[sec] = true
+		end
+		return bool
+	end
+end
+
+if workshop_autoinject then
+	base_clear_recipe = workshop_autoinject.clear_existing_recipes
+	function workshop_autoinject.clear_existing_recipes(sec)
+		local bool = base_clear_recipe(sec)
+		if bool then
+			wai_deletions[sec] = true
+		end
+		return bool
+	end
+end
+
+
+function get_craftable_items(sec)
+	printf('Using new fn')
+	local items_craftable = {}
+	if sec == "itm_artefactskit" then
+		return
+	end
+	
+	ini_craft:section_for_each(function(section)
+		local n = ini_craft:line_count(section) or 0
+		for i=0,n-1 do
+			result, recipe_name, info	= ini_craft:r_line_ex(section,i,"","")
+			local t = str_explode(info,",")
+			for k, v in pairs(t) do
+				if v == sec then
+					local craft_sec = string.sub(recipe_name, 3)
+					items_craftable[craft_sec] = true
+					break
+				end
+			end
+		end
+	end)
+
+	if workshop_autoinject then
+		for recipe_sec, v in pairs(wai_deletions) do
+			items_craftable[recipe_sec] = nil
+		end
+
+		for recipe_sec, string in pairs(wai_overrides)do
+			items_craftable[recipe_sec] = nil
+			if string ~= "none" then
+				local t = str_explode(string,",")
+				for k, v in pairs(t) do
+					if v == sec then
+						items_craftable[recipe_sec] = true
+						break
+					end
+				end
+			end
+		end
+
+		for recipe_sec, recipes in pairs(wai_added) do
+			for index, string in pairs(recipes) do
+				local t = str_explode(string,",")
+				for k, v in pairs(t) do
+					if v == sec then
+						items_craftable[recipe_sec] = true
+						break
+					end
+				end
+			end
+		end
+	end
+
+	return items_craftable
 end
