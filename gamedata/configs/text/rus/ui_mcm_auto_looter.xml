@@ -85,6 +85,9 @@
 	<string id="ui_mcm_auto_looter_loot_ammo_parts">
 		<text>Брать компоненты патронов</text>					 
 	</string>
+	<string id="ui_mcm_auto_looter_loot_grenades">
+		<text>Брать гранаты</text>
+	</string>
 	<string id="ui_mcm_auto_looter_loot_magazines">
 		<text>Брать магазины</text>
 	</string>
@@ -126,13 +129,13 @@
 		<text>Показывать сообщение, когда нет подходящего инструмента для разборки</text>
 	</string>
 	<string id="ui_mcm_auto_looter_usable_armor_part_condition_treshold">
-		<text>Порог состояния части брони</text>
+		<text>Порог состояния полезных частей брони</text>
 	</string>
 	<string id="ui_mcm_auto_looter_usable_weapon_part_condition_treshold">
-		<text>Порог состояния части оружия</text>
+		<text>Порог состояния пригодных к использованию частей оружия</text>
 	</string>
 	<string id="ui_mcm_auto_looter_always_treat_recipe_part_as_usable">
-		<text>Всегда считать часть рецепта пригодной для использования</text>
+		<text>Всегда относится к частям рецептов как к полезному.</text>
 	</string>
 	<string id="ui_mcm_auto_looter_always_treat_recipe_part_as_usable_description">
 		<text>Отключение этой опции вынуждает лутер учитывать только состояние части брони, определяя, является ли она пригодной для использования. Утверждение об использовании данной части в рецептах изготовления будет опущено.</text>

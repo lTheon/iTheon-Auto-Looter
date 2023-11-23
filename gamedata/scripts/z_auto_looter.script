@@ -1,5 +1,6 @@
 -- Auto Looter
 -- Author: iTheon
+-- Edited by Stalker_Boss 22.09.23
 -- License: MIT
 local disassemble_ammo_options = auto_looter_mcm.disassemble_ammo_options
 local disassemble_armor_options = auto_looter_mcm.disassemble_armor_options
@@ -350,6 +351,8 @@ function handle_loot(actor)
 		local should_loot = false
 		if IsAmmo(v) then
 			should_loot = config.loot_ammo
+		elseif IsGrenade(v) then
+			should_loot = config.loot_grenades
 		elseif has_value(ammo_parts_sections, v:section()) then
 			should_loot = config.loot_ammo_parts
 		elseif IsOutfit(v) or IsHeadgear(v) or IsWeapon(v) then
