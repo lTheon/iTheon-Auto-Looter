@@ -17,9 +17,13 @@ There's a fork of this mod made by one of users that includes more configs for m
 Contributors: 
 
 Russian translation: https://github.com/IIJTypmaH <br>
-Cool image you can see above and the MCM banner: Blackgrowl
+Cool image you can see above and the MCM banner: Blackgrowl<br>
+Grenade looting switch: Stalker_Boss
 
 Changelog:
+
+v0.1.19a
+- Add grenade looting switch by Stalker_Boss
 
 v0.1.19
 - Add craftable items detection function by Utjan to the core mod
