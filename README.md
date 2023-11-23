@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.19
+# iTheon-Auto-Looter - v0.1.19a
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
