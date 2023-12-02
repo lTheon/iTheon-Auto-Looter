@@ -1,6 +1,7 @@
 disassemble_ammo_options = {
 	all = "all",
 	non_favourite = "non_favourite",
+	junk_itms = "junk_itms",
 	none = "none"
 }
 
@@ -149,6 +150,7 @@ op = {
         {id = "disassemble_ammo", type="list", val=0, def=config.disassemble_ammo, content={
 			{disassemble_ammo_options.all, "auto_looter_all_label"},
 			{disassemble_ammo_options.non_favourite, "auto_looter_non_favourite_label"},
+			{disassemble_ammo_options.junk_itms, "auto_looter_junk_itms_label"},
 			{disassemble_ammo_options.none, "auto_looter_none_label"},
 		  }
 		},

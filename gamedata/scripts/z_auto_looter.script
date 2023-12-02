@@ -224,6 +224,16 @@ function cond_ammo_disassemble(obj)
 			return true
 		end
 	end
+	if config.disassemble_ammo == disassemble_ammo_options.junk_itms then
+		if not junk_itms[obj:section()] then
+			return false
+		end
+	end
+	if config.disassemble_ammo == disassemble_ammo_options.junk_itms then
+		if junk_itms[obj:section()] then
+			return true
+		end
+	end
 	return false
 end
 
@@ -435,6 +445,7 @@ end
 
 local function load_state(mdata)
     favorite_itms = mdata.rax_favorite_itms or favorite_itms
+	junk_itms = mdata.rax_junk_itms or junk_itms
 end
 
 function is_misc_item_defined_in_disassemble_config(obj)
