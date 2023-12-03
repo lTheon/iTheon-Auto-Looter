@@ -56,6 +56,7 @@ local ammo_parts_sections = {
 }
 
 local favorite_itms = {}
+local junk_itms = {}
 local actors_being_processed = {}
 
 function is_right_key(key)
@@ -221,6 +222,11 @@ function cond_ammo_disassemble(obj)
 	end
 	if config.disassemble_ammo == disassemble_ammo_options.non_favourite then
 		if not favorite_itms[obj:section()] then
+			return true
+		end
+	end
+	if config.disassemble_ammo == disassemble_ammo_options.junk_itms then
+		if junk_itms[obj:section()] then
 			return true
 		end
 	end
@@ -435,6 +441,7 @@ end
 
 local function load_state(mdata)
     favorite_itms = mdata.rax_favorite_itms or favorite_itms
+	junk_itms = mdata.rax_junk_itms or junk_itms
 end
 
 function is_misc_item_defined_in_disassemble_config(obj)

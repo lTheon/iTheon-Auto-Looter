@@ -152,6 +152,9 @@
 	<string id="ui_mcm_lst_auto_looter_non_favourite_label">
 		<text>Non-favourite only</text>
 	</string>
+	<string id="ui_mcm_lst_auto_looter_junk_itms_label">
+		<text>Items Marked as Junk only</text>
+	</string>
 	<string id="ui_mcm_lst_auto_looter_with_usable_parts_label">
 		<text>With usable parts</text>
 	</string>
