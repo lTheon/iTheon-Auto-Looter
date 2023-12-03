@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.19a
+# iTheon-Auto-Looter - v0.1.20
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -18,9 +18,13 @@ Contributors:
 
 Russian translation: https://github.com/IIJTypmaH <br>
 Cool image you can see above and the MCM banner: Blackgrowl<br>
-Grenade looting switch: Stalker_Boss
+Grenade looting switch: Stalker_Boss <br>
+Additional ammo disassembling options: VenomsAssassin
 
 Changelog:
+
+v0.1.20
+- Added new ammo disassembling options by VenomsAssassin
 
 v0.1.19a
 - Add grenade looting switch by Stalker_Boss
