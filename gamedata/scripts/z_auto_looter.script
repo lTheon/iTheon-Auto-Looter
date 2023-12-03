@@ -56,6 +56,7 @@ local ammo_parts_sections = {
 }
 
 local favorite_itms = {}
+local junk_itms = {}
 local actors_being_processed = {}
 
 function is_right_key(key)
@@ -222,11 +223,6 @@ function cond_ammo_disassemble(obj)
 	if config.disassemble_ammo == disassemble_ammo_options.non_favourite then
 		if not favorite_itms[obj:section()] then
 			return true
-		end
-	end
-	if config.disassemble_ammo == disassemble_ammo_options.junk_itms then
-		if not junk_itms[obj:section()] then
-			return false
 		end
 	end
 	if config.disassemble_ammo == disassemble_ammo_options.junk_itms then
