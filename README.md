@@ -1,4 +1,4 @@
-# iTheon-Auto-Looter - v0.1.20
+# iTheon-Auto-Looter - v0.1.21
 
 ![Auto looter by Blackgrowl](https://user-images.githubusercontent.com/35302307/216791072-fa553c9d-d205-4480-a506-b833aee55ed1.jpg)
 
@@ -22,6 +22,9 @@ Grenade looting switch: Stalker_Boss <br>
 Additional ammo disassembling options: VenomsAssassin
 
 Changelog:
+
+v0.1.21
+- Fix silent engine error on looting placed backpacks that'd result in them being picked up entirely
 
 v0.1.20
 - Added new ammo disassembling options by VenomsAssassin
