@@ -485,6 +485,13 @@ function change_loot_config(obj)
 	config[config_key] = new_value
 end
 
+function actor_on_stash_remove(data)
+	-- To prevent silent engine error on looting placed backpacks that'd result on releasing the invbox (due to being empty), removal has to be cancelled
+	if actors_being_processed[data.stash_id] then
+		data.cancel = true
+	end 
+end
+
 
 function on_game_start()
 	ini_craft = ini_file("items\\settings\\craft.ltx")
@@ -508,6 +515,7 @@ function on_game_start()
 	RegisterScriptCallback("load_state", load_state)
 	RegisterScriptCallback("on_game_load", load_settings)
 	RegisterScriptCallback("on_option_change", load_settings)
+	RegisterScriptCallback("actor_on_stash_remove", actor_on_stash_remove)
 end
 
 function has_parts(wpn)
