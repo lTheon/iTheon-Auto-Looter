@@ -91,6 +91,9 @@
 	<string id="ui_mcm_auto_looter_loot_magazines">
 		<text>Брать магазины</text>
 	</string>
+	<string id="ui_mcm_auto_looter_loot_lootboxes">
+		<text>Брать лутбоксы</text>
+	</string>
 	<string id="ui_mcm_auto_looter_loot_armor_parts">
 		<text>Брать компоненты брони</text>
 	</string>

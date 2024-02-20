@@ -91,6 +91,9 @@
 	<string id="ui_mcm_auto_looter_loot_magazines">
 		<text>Loot magazines</text>
 	</string>
+	<string id="ui_mcm_auto_looter_loot_lootboxes">
+		<text>Loot lootboxes</text>
+	</string>
 	<string id="ui_mcm_auto_looter_loot_armor_parts">
 		<text>Loot armor parts</text>
 	</string>
