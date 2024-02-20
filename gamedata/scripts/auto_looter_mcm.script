@@ -126,6 +126,7 @@ config = {
 	no_valid_tool_messaging = true,
 	delete_body = false,
 	loot_magazines = true,
+	loot_lootboxes = false,
 	always_treat_recipe_part_as_usable = true
 }
 
@@ -209,6 +210,7 @@ local rest = {
 	{id = "loot_ammo_parts", type = "check", val = 1, def = config.loot_ammo_parts},
 	{id = "loot_grenades", type = "check", val = 1, def = config.loot_grenades},
 	{id = "loot_magazines", type = "check", val = 1, def = config.loot_magazines, precondition = {function () return not not magazine_binder end}},
+	{id = "loot_lootboxes", type = "check", val = 1, def = config.loot_lootboxes},
 	{id = "loot_armor_parts", type="list", val=0, def=config.loot_armor_parts, content={
 		{loot_part_options.all, "auto_looter_all_label"},
 		{loot_part_options.usable, "auto_looter_usable_label"},
