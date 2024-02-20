@@ -351,36 +351,50 @@ end
 
 function handle_loot(actor)
 	local collected_items = collect_items(actor)
-
 	for k, v in pairs(collected_items) do
-		local should_loot = false
-		local sec = v:section()
-
-        if IsAmmo(v) then
-            should_loot = config.loot_ammo
-        elseif IsGrenade(v) then
-            should_loot = config.loot_grenades
-        elseif has_value(ammo_parts_sections, sec) then
-            should_loot = config.loot_ammo_parts
-        elseif IsOutfit(v) or IsHeadgear(v) or IsWeapon(v) then
-            should_loot = false -- Explicitly not looting these
-        elseif magazine_binder and magazine_binder.is_magazine(v) then
-            should_loot = config.loot_magazines
-        elseif string.find(sec, "prt_o_") then
-            should_loot = cond_loot_armor_part(v)
-        elseif string.find(sec, "prt_w_") then
-            should_loot = cond_loot_weapon_part(v)
-		elseif string.find(sec, "lootbox_") then
-            should_loot = config.loot_lootboxes
-			printf("Section: %s, Should loot: %s", sec, tostring(should_loot))
-        else
-			should_loot = true
-		end
-
-		if should_loot then
+		if is_item_set_to_be_looted(v) then
 			actor:transfer_item(v, db.actor)
 		end
 	end
+end
+
+function is_item_set_to_be_looted(item)
+	local section = item:section()
+	
+	if IsAmmo(item) then
+        return config.loot_ammo
+	end
+
+	-- this condifion is put above grenade check since lootbox for some reason is indentified as grenade
+	if string.find(section, "lootbox_") then
+	    return config.loot_lootboxes
+    end
+
+	if IsGrenade(item) then
+        return config.loot_grenades
+	end
+
+    if has_value(ammo_parts_sections, section) then
+        return config.loot_ammo_parts
+	end
+
+    if IsOutfit(item) or IsHeadgear(item) or IsWeapon(item) then
+        return false -- Explicitly not looting these
+	end
+
+	if magazine_binder and magazine_binder.is_magazine(item) then
+        return config.loot_magazines
+	end
+
+	if string.find(section, "prt_o_") then
+        return cond_loot_armor_part(item)
+	end
+
+	if string.find(section, "prt_w_") then
+        return cond_loot_weapon_part(item)
+    end
+
+	return true
 end
 
 function cond_loot_armor_part(obj)
