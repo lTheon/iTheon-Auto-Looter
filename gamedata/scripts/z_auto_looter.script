@@ -72,7 +72,11 @@ function get_actor()
 	-- To do: refactor if any more changes will be required - actor retrieval is ugly
 	-- Standard looting
 	local last_mode = actor_menu.get_last_mode()
-	local object_being_looted = level.object_by_id(ui_inventory.GUI.npc_id)
+	 if ui_inventory.GUI.npc_id then
+        local object_being_looted = level.object_by_id(ui_inventory.GUI.npc_id)
+    else
+        return
+    end
 	if object_being_looted and (not object_being_looted:alive()) and valid_modes[last_mode] then
 		return object_being_looted
 	end
